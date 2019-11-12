@@ -28,7 +28,7 @@ xui.Class('App', 'xui.Module',{
                 .setWidth("24.5em")
                 .setHeight("1.2444444444444445em")
                 .setCaption("Click the link to show website in below div")
-                .setHref("")
+                .setHref("{xui.constant.href}")
                 .onClick({
                     "return":"{false}",
                     "actions":[
@@ -135,7 +135,7 @@ xui.Class('App', 'xui.Module',{
                         "imageClass":""
                     },
                     {
-                        "id":"unclickable=0",
+                        "id":"clickable=1",
                         "caption":"clickable",
                         "imageClass":""
                     }
