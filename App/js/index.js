@@ -28,7 +28,7 @@ xui.Class('App', 'xui.Module',{
                 .setWidth("26.755555555555556em")
                 .setHeight("1.2444444444444445em")
                 .setCaption("Click the link to show website in below div")
-                .setHref("https://crossui.com")
+                .setHref("https://linb.github.io/AdvLink-Demo/debug.html#inner=1")
                 .onClick({
                     "return":"{false}",
                     "actions":[
@@ -43,7 +43,14 @@ xui.Class('App', 'xui.Module',{
                                 }
                             ],
                             "method":"setProperties",
-                            "event":1
+                            "event":1,
+                            "conditions":[
+                                {
+                                    "left":"{getFI(\"inner\")}",
+                                    "symbol":"undefined",
+                                    "right":""
+                                }
+                            ]
                         }
                     ]
                 })
