@@ -115,7 +115,7 @@ xui.Class('App', 'xui.Module',{
                         "imageClass":""
                     },
                     {
-                        "id":"unclickable=0",
+                        "id":"clickable",
                         "caption":"clickable",
                         "imageClass":""
                     }
