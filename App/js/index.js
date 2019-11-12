@@ -28,7 +28,7 @@ xui.Class('App', 'xui.Module',{
                 .setWidth("26.755555555555556em")
                 .setHeight("1.2444444444444445em")
                 .setCaption("Click the link to show website in below div")
-                .setHref("https://linb.github.io/AdvLink-Demo/")
+                .setHref("{xui.constant.href}")
                 .onClick({
                     "return":"{false}",
                     "actions":[
@@ -46,7 +46,7 @@ xui.Class('App', 'xui.Module',{
                             "event":1,
                             "conditions":[
                                 {
-                                    "left":"{getFI(\"unclickable\")}",
+                                    "left":"{getFI(\"inner\")}",
                                     "symbol":"undefined",
                                     "right":""
                                 }
@@ -60,9 +60,9 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.UI.Div")
                 .setHost(host,"xui_ui_div17")
                 .setLeft("4.444444444444445em")
-                .setTop("12.444444444444445em")
+                .setTop("8em")
                 .setWidth("63.37777777777778em")
-                .setHeight("17.155555555555555em")
+                .setHeight("23.822222222222223em")
                 .setCustomStyle({
                     "KEY":{
                         "border-top":"solid 1px #000000",
@@ -76,11 +76,44 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Label")
                 .setHost(host,"xui_ui_label16")
-                .setLeft("28.444444444444443em")
-                .setTop("4.444444444444445em")
+                .setLeft("44.44444444444444em")
+                .setTop("5.333333333333333em")
                 .setWidth("23.822222222222223em")
-                .setCaption("href = ")
+                .setCaption("href = {xui.constant.href}")
                 .setHAlign("left")
+            );
+            
+            append(
+                xui.create("xui.UI.HTMLButton")
+                .setHost(host,"xui_ui_htmlbutton3")
+                .setLeft("7.111111111111111em")
+                .setTop("33.77777777777778em")
+                .setWidth("20em")
+                .setCaption("Modify the link's href in above div")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput83")
+                .setDirtyMark(false)
+                .setLeft("45.333333333333336em")
+                .setTop("0.8888888888888888em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("URL Fragment")
+                .setType("listbox")
+                .setItems([
+                    {
+                        "id":"unclickable=1",
+                        "caption":"unclickable",
+                        "imageClass":"xui-icon-number1"
+                    },
+                    {
+                        "id":"unclickable=0",
+                        "caption":"clickable",
+                        "imageClass":"xui-icon-number2"
+                    }
+                ])
             );
             
             return children;
