@@ -43,7 +43,14 @@ xui.Class('App', 'xui.Module',{
                                 }
                             ],
                             "method":"setProperties",
-                            "event":1
+                            "event":1,
+                            "conditions":[
+                                {
+                                    "left":"{getFI(\"unclickable\")}",
+                                    "symbol":"undefined",
+                                    "right":""
+                                }
+                            ]
                         }
                     ]
                 })
@@ -128,7 +135,6 @@ xui.Class('App', 'xui.Module',{
                         "imageClass":""
                     }
                 ])
-                
                 .onChange([
                     {
                         "desc":"Action 1",
