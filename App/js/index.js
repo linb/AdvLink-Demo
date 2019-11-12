@@ -89,6 +89,21 @@ xui.Class('App', 'xui.Module',{
                 .setTop("33.77777777777778em")
                 .setWidth("20em")
                 .setCaption("Modify the link's href in above div")
+                .onClick([
+                    {
+                        "desc":"Action 1",
+                        "type":"control",
+                        "target":"xui_ui_div17",
+                        "args":[
+                            { },
+                            {
+                                "iframeAutoLoad":"{xui.constant.href}#other=2"
+                            }
+                        ],
+                        "method":"setProperties",
+                        "event":1
+                    }
+                ])
             );
             
             append(
@@ -108,7 +123,7 @@ xui.Class('App', 'xui.Module',{
                         "imageClass":""
                     },
                     {
-                        "id":"",
+                        "id":"unclickable=0",
                         "caption":"clickable",
                         "imageClass":""
                     }
@@ -154,24 +169,26 @@ xui.Class('App', 'xui.Module',{
         events:{
             "onFragmentChanged":[
                 {
-                    "desc":"get href",
-                    "type":"other",
-                    "target":"var",
-                    "args":[
-                        "href",
-                        "{page.xui_ui_link1.getHref()}"
-                    ],
-                    "method":"temp",
-                    "return":false
-                },
-                {
-                    "desc":"set href",
+                    "desc":"set link",
                     "type":"control",
                     "target":"xui_ui_link1",
                     "args":[
                         { },
                         {
-                            "href":"{args[1]}"
+                            "href":"{xui.constant.href}#{args[1]}"
+                        }
+                    ],
+                    "method":"setProperties",
+                    "return":false
+                },
+                {
+                    "desc":"set label",
+                    "type":"control",
+                    "target":"xui_ui_link1",
+                    "args":[
+                        { },
+                        {
+                            "href":"{xui.constant.href}#{args[1]}"
                         }
                     ],
                     "method":"setProperties"
