@@ -46,7 +46,7 @@ xui.Class('App', 'xui.Module',{
                             "event":1,
                             "conditions":[
                                 {
-                                    "left":"{getFI(\"inner\")}",
+                                    "left":"{getFI(\"unclickable\")}",
                                     "symbol":"undefined",
                                     "right":""
                                 }
@@ -112,12 +112,12 @@ xui.Class('App', 'xui.Module',{
                     {
                         "id":"unclickable=1",
                         "caption":"unclickable",
-                        "imageClass":"xui-icon-number1"
+                        "imageClass":""
                     },
                     {
                         "id":"unclickable=0",
                         "caption":"clickable",
-                        "imageClass":"xui-icon-number2"
+                        "imageClass":""
                     }
                 ])
                 .onChange([
