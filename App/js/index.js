@@ -28,7 +28,7 @@ xui.Class('App', 'xui.Module',{
                 .setWidth("26.755555555555556em")
                 .setHeight("1.2444444444444445em")
                 .setCaption("Click the link to show website in below div")
-                .setHref("https://linb.github.io/AdvLink-Demo/debug.html#inner=1")
+                .setHref("https://linb.github.io/AdvLink-Demo/")
                 .onClick({
                     "return":"{false}",
                     "actions":[
@@ -46,7 +46,7 @@ xui.Class('App', 'xui.Module',{
                             "event":1,
                             "conditions":[
                                 {
-                                    "left":"{getFI(\"inner\")}",
+                                    "left":"{getFI(\"unclickable\")}",
                                     "symbol":"undefined",
                                     "right":""
                                 }
@@ -61,7 +61,7 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"xui_ui_div17")
                 .setLeft("4.444444444444445em")
                 .setTop("12.444444444444445em")
-                .setWidth("39.37777777777778em")
+                .setWidth("63.37777777777778em")
                 .setHeight("17.155555555555555em")
                 .setCustomStyle({
                     "KEY":{
@@ -73,6 +73,16 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
+            append(
+                xui.create("xui.UI.Label")
+                .setHost(host,"xui_ui_label16")
+                .setLeft("28.444444444444443em")
+                .setTop("4.444444444444445em")
+                .setWidth("23.822222222222223em")
+                .setCaption("href = ")
+                .setHAlign("left")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
@@ -81,6 +91,33 @@ xui.Class('App', 'xui.Module',{
         customAppend : function(parent, subId, left, top){
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
+        },
+        events:{
+            "onFragmentChanged":[
+                {
+                    "desc":"get href",
+                    "type":"other",
+                    "target":"var",
+                    "args":[
+                        "href",
+                        "{page.xui_ui_link1.getHref()}"
+                    ],
+                    "method":"temp",
+                    "return":false
+                },
+                {
+                    "desc":"set href",
+                    "type":"control",
+                    "target":"xui_ui_link1",
+                    "args":[
+                        { },
+                        {
+                            "href":"{args[1]}"
+                        }
+                    ],
+                    "method":"setProperties"
+                }
+            ]
         }
         /*,
         // To determine how properties affects this module
