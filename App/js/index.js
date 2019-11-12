@@ -46,6 +46,11 @@ xui.Class('App', 'xui.Module',{
                             "event":1,
                             "conditions":[
                                 {
+                                    "left":"{args[0].boxing().getHref()}",
+                                    "symbol":"non-empty",
+                                    "right":""
+                                },
+                                {
                                     "left":"{getFI(\"unclickable\")}",
                                     "symbol":"undefined",
                                     "right":""
@@ -130,7 +135,7 @@ xui.Class('App', 'xui.Module',{
                         "imageClass":""
                     },
                     {
-                        "id":"",
+                        "id":"unclickable=0",
                         "caption":"clickable",
                         "imageClass":""
                     }
@@ -139,11 +144,11 @@ xui.Class('App', 'xui.Module',{
                     {
                         "desc":"Action 1",
                         "type":"control",
-                        "target":"xui_ui_label16",
+                        "target":"xui_ui_link1",
                         "args":[
                             { },
                             {
-                                "caption":"href = {xui.constant.href}#{args[2]}"
+                                "href":"{xui.constant.href}#{args[2]}"
                             }
                         ],
                         "method":"setProperties",
