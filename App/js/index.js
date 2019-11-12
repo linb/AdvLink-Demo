@@ -25,7 +25,7 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"xui_ui_link1")
                 .setLeft("7.111111111111111em")
                 .setTop("4.444444444444445em")
-                .setWidth("26.755555555555556em")
+                .setWidth("24.5em")
                 .setHeight("1.2444444444444445em")
                 .setCaption("Click the link to show website in below div")
                 .setHref("{xui.constant.href}")
@@ -54,6 +54,12 @@ xui.Class('App', 'xui.Module',{
                         }
                     ]
                 })
+                .setCustomStyle({
+                    "KEY":{
+                        "font-size":"12px",
+                        "font-weight":"bold"
+                    }
+                })
             );
             
             append(
@@ -76,8 +82,8 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Label")
                 .setHost(host,"xui_ui_label16")
-                .setLeft("44.44444444444444em")
-                .setTop("5.333333333333333em")
+                .setLeft("38.22222222222222em")
+                .setTop("4.977777777777778em")
                 .setWidth("23.822222222222223em")
                 .setCaption("href = {xui.constant.href}")
                 .setHAlign("left")
@@ -96,7 +102,7 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"xui_ui_comboinput83")
                 .setDirtyMark(false)
-                .setLeft("45.333333333333336em")
+                .setLeft("7.111111111111111em")
                 .setTop("0.8888888888888888em")
                 .setWidth("18em")
                 .setLabelSize("8em")
@@ -112,6 +118,33 @@ xui.Class('App', 'xui.Module',{
                         "id":"unclickable=0",
                         "caption":"clickable",
                         "imageClass":"xui-icon-number2"
+                    }
+                ])
+                .onChange([
+                    {
+                        "desc":"Action 1",
+                        "type":"control",
+                        "target":"xui_ui_link1",
+                        "args":[
+                            { },
+                            {
+                                "href":"{xui.constant.href}#{args[2]}"
+                            }
+                        ],
+                        "method":"setProperties",
+                        "return":false
+                    },
+                    {
+                        "desc":"Action 2",
+                        "type":"control",
+                        "target":"xui_ui_label16",
+                        "args":[
+                            { },
+                            {
+                                "caption":"href = {xui.constant.href}#{args[2]}"
+                            }
+                        ],
+                        "method":"setProperties"
                     }
                 ])
             );
