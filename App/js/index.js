@@ -95,30 +95,6 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
-                xui.create("xui.UI.HTMLButton")
-                .setHost(host,"xui_ui_htmlbutton3")
-                .setLeft("7.111111111111111em")
-                .setTop("33.77777777777778em")
-                .setWidth("20em")
-                .setCaption("Modify the link's href in above div")
-                .onClick([
-                    {
-                        "desc":"Action 1",
-                        "type":"control",
-                        "target":"xui_ui_div17",
-                        "args":[
-                            { },
-                            {
-                                "iframeAutoLoad":"{xui.constant.href}#other=2"
-                            }
-                        ],
-                        "method":"setProperties",
-                        "event":1
-                    }
-                ])
-            );
-            
-            append(
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"xui_ui_comboinput83")
                 .setDirtyMark(false)
