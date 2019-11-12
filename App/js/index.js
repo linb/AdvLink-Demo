@@ -76,7 +76,7 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.UI.Label")
                 .setHost(host,"xui_ui_label16")
                 .setLeft("38.22222222222222em")
-                .setTop("4.977777777777778em")
+                .setTop("4.888888888888889em")
                 .setWidth("27.555555555555557em")
                 .setCaption("href = {xui.constant.href}")
                 .setHAlign("left")
@@ -128,6 +128,7 @@ xui.Class('App', 'xui.Module',{
                         "imageClass":""
                     }
                 ])
+                
                 .onChange([
                     {
                         "desc":"Action 1",
