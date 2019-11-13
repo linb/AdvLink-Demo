@@ -153,35 +153,7 @@ xui.Class('App', 'xui.Module',{
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
         },
-        events:{
-            "onFragmentChanged":[
-                {
-                    "desc":"set link",
-                    "type":"control",
-                    "target":"xui_ui_link1",
-                    "args":[
-                        { },
-                        {
-                            "href":"{xui.constant.href}#{args[1]}"
-                        }
-                    ],
-                    "method":"setProperties",
-                    "return":false
-                },
-                {
-                    "desc":"set label",
-                    "type":"control",
-                    "target":"xui_ui_link1",
-                    "args":[
-                        { },
-                        {
-                            "caption":"{xui.constant.href}#{args[1]}"
-                        }
-                    ],
-                    "method":"setProperties"
-                }
-            ]
-        }
+        events:{ }
         /*,
         // To determine how properties affects this module
         propSetAction : function(prop){
