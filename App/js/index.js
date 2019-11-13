@@ -175,7 +175,7 @@ xui.Class('App', 'xui.Module',{
                     "args":[
                         { },
                         {
-                            "href":"{xui.constant.href}#{args[1]}"
+                            "caption":"{xui.constant.href}#{args[1]}"
                         }
                     ],
                     "method":"setProperties"
