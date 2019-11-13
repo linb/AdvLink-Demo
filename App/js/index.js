@@ -127,8 +127,7 @@ xui.Class('App', 'xui.Module',{
                                 "href":"{xui.constant.href}#{args[2]}"
                             }
                         ],
-                        "method":"setProperties",
-                        "return":false
+                        "method":"setProperties"
                     },
                     {
                         "desc":"Action 2",
