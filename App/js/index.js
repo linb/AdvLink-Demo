@@ -87,7 +87,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Label")
                 .setHost(host,"xui_ui_label16")
-                .setLeft("38.22222222222222em")
+                .setLeft("37.5em")
                 .setTop("4.888888888888889em")
                 .setWidth("27.555555555555557em")
                 .setCaption("href = {xui.constant.href}")
