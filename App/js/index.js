@@ -1,4 +1,4 @@
-// 3 The default code is a module class (inherited from xui.Module)
+// 23 The default code is a module class (inherited from xui.Module)
 // Ensure that all the value of "key/value pair" does not refer to external variables
 xui.Class('App', 'xui.Module',{
     Instance:{
