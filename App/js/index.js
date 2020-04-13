@@ -90,7 +90,7 @@ xui.Class('App', 'xui.Module',{
                 .setLeft("37.5em")
                 .setTop("4.495238095238095em")
                 .setWidth("27.555555555555557em")
-                .setCaption("href = {xui.constant.href}")
+                .setCaption("> href = {xui.constant.href}")
                 .setHAlign("left")
             );
             
