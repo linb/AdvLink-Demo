@@ -1,4 +1,4 @@
-// 23 The default code is a module class (inherited from xui.Module)
+// The default code is a module class (inherited from xui.Module)
 // Ensure that all the value of "key/value pair" does not refer to external variables
 xui.Class('App', 'xui.Module',{
     Instance:{
@@ -142,6 +142,14 @@ xui.Class('App', 'xui.Module',{
                         "method":"setProperties"
                     }
                 ])
+            );
+            
+            append(
+                xui.create("xui.UI.Image")
+                .setHost(host,"xui_ui_image7")
+                .setLeft("0.7619047619047619em")
+                .setTop("0.7619047619047619em")
+                .setSrc("{xui.ini.img_pic}")
             );
             
             return children;
