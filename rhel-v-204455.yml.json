@@ -1,0 +1,313 @@
+{
+    "designParameters": {
+        "block_count": 0,
+        "blocks": [],
+        "input_file": "rhel-v-204455.yml",
+        "notes": "",
+        "parse_time": "0:00:00.006916",
+        "scopes": {
+            "g": {
+                "declarations": {
+                    "": 1,
+                    "[0]": 1
+                },
+                "end": 1,
+                "index": 0,
+                "line": [
+                    1,
+                    12
+                ],
+                "name": "global",
+                "start": 1,
+                "type": "N10YamlParser12BlockContextE"
+            },
+            "g.0": {
+                "declarations": {
+                    "[0]": 1,
+                    "become": 1,
+                    "gather_facts": 1,
+                    "hosts": 1,
+                    "tasks": 1
+                },
+                "end": 2,
+                "index": 0,
+                "line": [
+                    2,
+                    12
+                ],
+                "name": "global.[0]",
+                "start": 1,
+                "type": "N10YamlParser14ArritemContextE"
+            },
+            "g.0.0": {
+                "declarations": {
+                    "[0]": 1,
+                    "name": 1,
+                    "systemd": 1
+                },
+                "end": 2,
+                "index": 0,
+                "line": [
+                    7,
+                    12
+                ],
+                "name": "global.[0].[0]",
+                "start": 3,
+                "type": "N10YamlParser14ArritemContextE"
+            },
+            "g.0.0.0": {
+                "declarations": {
+                    "masked": 1,
+                    "name": 1
+                },
+                "end": 2,
+                "index": 0,
+                "line": [
+                    8,
+                    12
+                ],
+                "name": "global.[0].[0].systemd",
+                "start": 5,
+                "type": "N10YamlParser14ObjitemContextE"
+            }
+        },
+        "script": "",
+        "type": "script",
+        "variable_count": 10,
+        "variables": [
+            {
+                "line_numbers": [
+                    [
+                        2,
+                        12
+                    ]
+                ],
+                "name": "[0]",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^[0].w1q0elf^"
+                ],
+                "scope": "g",
+                "value_indexes": [
+                    [
+                        1,
+                        2
+                    ]
+                ],
+                "values": [
+                    "hosts: rhel\n  become: yes\n  gather_facts: yes\n\n  tasks:\n  - name: \"CAT I | RHEL-07-020230 | Ctrl-Alt-Delete key sequence is disabled.\"\n    systemd:\n      name: ctrl-alt-del\n      masked: yes\n\n"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        2,
+                        2
+                    ]
+                ],
+                "name": "hosts",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^HOSTS.9u2p3pee^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        10,
+                        14
+                    ]
+                ],
+                "values": [
+                    "rhel"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        3,
+                        3
+                    ]
+                ],
+                "name": "become",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^BECOME.3r2yul4b^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        11,
+                        14
+                    ]
+                ],
+                "values": [
+                    "yes"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        4,
+                        4
+                    ]
+                ],
+                "name": "gather_facts",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^GATHER_FACTS.aoxlbq1r^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        17,
+                        20
+                    ]
+                ],
+                "values": [
+                    "yes"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        6,
+                        12
+                    ]
+                ],
+                "name": "tasks",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^TASKS.bdb1c9ug^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        3,
+                        2
+                    ]
+                ],
+                "values": [
+                    "- name: \"CAT I | RHEL-07-020230 | Ctrl-Alt-Delete key sequence is disabled.\"\n    systemd:\n      name: ctrl-alt-del\n      masked: yes\n\n"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        7,
+                        12
+                    ]
+                ],
+                "name": "[0]",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^[0].7d0ias24^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        3,
+                        2
+                    ]
+                ],
+                "values": [
+                    "name: \"CAT I | RHEL-07-020230 | Ctrl-Alt-Delete key sequence is disabled.\"\n    systemd:\n      name: ctrl-alt-del\n      masked: yes\n\n"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        7,
+                        7
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^NAME.47dwc2af^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        11,
+                        79
+                    ]
+                ],
+                "values": [
+                    "\"CAT I | RHEL-07-020230 | Ctrl-Alt-Delete key sequence is disabled.\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        8,
+                        12
+                    ]
+                ],
+                "name": "systemd",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^SYSTEMD.59k5odpg^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        5,
+                        2
+                    ]
+                ],
+                "values": [
+                    "name: ctrl-alt-del\n      masked: yes\n\n"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        9,
+                        9
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^NAME.6xtcqwlx^"
+                ],
+                "scope": "g.0.0.0",
+                "value_indexes": [
+                    [
+                        13,
+                        25
+                    ]
+                ],
+                "values": [
+                    "ctrl-alt-del"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        10,
+                        10
+                    ]
+                ],
+                "name": "masked",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^MASKED.de0ets0o^"
+                ],
+                "scope": "g.0.0.0",
+                "value_indexes": [
+                    [
+                        15,
+                        18
+                    ]
+                ],
+                "values": [
+                    "yes"
+                ]
+            }
+        ]
+    },
+    "file": "---\n^[0].w1q0elf^\n\n\n\n\n\n\n\n\n\n\n",
+    "modified": "Wed, 02 Mar 2022 19:14:37 GMT",
+    "size": 28
+}
