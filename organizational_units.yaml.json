@@ -1,0 +1,1400 @@
+{
+    "designParameters": {
+        "block_count": 0,
+        "blocks": [],
+        "input_file": "NewFolder/organizational_units.yaml",
+        "parse_time": "0:00:00.334663",
+        "scopes": {
+            "g": {
+                "declarations": {},
+                "end": 1351,
+                "index": 1,
+                "line": [
+                    1,
+                    54
+                ],
+                "name": "global",
+                "start": 0,
+                "type": "block"
+            },
+            "g.0": {
+                "end": 1351,
+                "index": 13,
+                "line": [
+                    1,
+                    53
+                ],
+                "name": "global.organizational_units",
+                "order": 13,
+                "scope": "g",
+                "start": 0,
+                "type": "ObjitemContext"
+            },
+            "g.0.0": {
+                "end": 119,
+                "index": 0,
+                "line": [
+                    2,
+                    5
+                ],
+                "name": "global.organizational_units.[0]",
+                "scope": "g.0",
+                "start": 25,
+                "type": "ArritemContext"
+            },
+            "g.0.1": {
+                "end": 211,
+                "index": 0,
+                "line": [
+                    6,
+                    9
+                ],
+                "name": "global.organizational_units.[1]",
+                "scope": "g.0",
+                "start": 119,
+                "type": "ArritemContext"
+            },
+            "g.0.10": {
+                "end": 1136,
+                "index": 0,
+                "line": [
+                    42,
+                    45
+                ],
+                "name": "global.organizational_units.[10]",
+                "scope": "g.0",
+                "start": 1032,
+                "type": "ArritemContext"
+            },
+            "g.0.11": {
+                "end": 1243,
+                "index": 0,
+                "line": [
+                    46,
+                    49
+                ],
+                "name": "global.organizational_units.[11]",
+                "scope": "g.0",
+                "start": 1136,
+                "type": "ArritemContext"
+            },
+            "g.0.12": {
+                "end": 1351,
+                "index": 0,
+                "line": [
+                    50,
+                    53
+                ],
+                "name": "global.organizational_units.[12]",
+                "scope": "g.0",
+                "start": 1243,
+                "type": "ArritemContext"
+            },
+            "g.0.2": {
+                "end": 311,
+                "index": 0,
+                "line": [
+                    10,
+                    13
+                ],
+                "name": "global.organizational_units.[2]",
+                "scope": "g.0",
+                "start": 211,
+                "type": "ArritemContext"
+            },
+            "g.0.3": {
+                "end": 414,
+                "index": 0,
+                "line": [
+                    14,
+                    17
+                ],
+                "name": "global.organizational_units.[3]",
+                "scope": "g.0",
+                "start": 311,
+                "type": "ArritemContext"
+            },
+            "g.0.4": {
+                "end": 515,
+                "index": 0,
+                "line": [
+                    18,
+                    21
+                ],
+                "name": "global.organizational_units.[4]",
+                "scope": "g.0",
+                "start": 414,
+                "type": "ArritemContext"
+            },
+            "g.0.5": {
+                "end": 624,
+                "index": 0,
+                "line": [
+                    22,
+                    25
+                ],
+                "name": "global.organizational_units.[5]",
+                "scope": "g.0",
+                "start": 515,
+                "type": "ArritemContext"
+            },
+            "g.0.6": {
+                "end": 723,
+                "index": 0,
+                "line": [
+                    26,
+                    29
+                ],
+                "name": "global.organizational_units.[6]",
+                "scope": "g.0",
+                "start": 624,
+                "type": "ArritemContext"
+            },
+            "g.0.7": {
+                "end": 829,
+                "index": 0,
+                "line": [
+                    30,
+                    33
+                ],
+                "name": "global.organizational_units.[7]",
+                "scope": "g.0",
+                "start": 723,
+                "type": "ArritemContext"
+            },
+            "g.0.8": {
+                "end": 927,
+                "index": 0,
+                "line": [
+                    34,
+                    37
+                ],
+                "name": "global.organizational_units.[8]",
+                "scope": "g.0",
+                "start": 829,
+                "type": "ArritemContext"
+            },
+            "g.0.9": {
+                "end": 1032,
+                "index": 0,
+                "line": [
+                    38,
+                    41
+                ],
+                "name": "global.organizational_units.[9]",
+                "scope": "g.0",
+                "start": 927,
+                "type": "ArritemContext"
+            }
+        },
+        "script": "",
+        "type": "dataset",
+        "variable_count": 52,
+        "variables": [
+            {
+                "line_numbers": [
+                    [
+                        2,
+                        2
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        11,
+                        15
+                    ]
+                ],
+                "values": [
+                    "ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        3,
+                        3
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        11,
+                        13
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        4,
+                        4
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        5,
+                        5
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        6,
+                        6
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.1",
+                "value_indexes": [
+                    [
+                        11,
+                        13
+                    ]
+                ],
+                "values": [
+                    "IT"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        7,
+                        7
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.1",
+                "value_indexes": [
+                    [
+                        11,
+                        13
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        8,
+                        8
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.1",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        9,
+                        9
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.1",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        10,
+                        10
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.2",
+                "value_indexes": [
+                    [
+                        11,
+                        16
+                    ]
+                ],
+                "values": [
+                    "Group"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        11,
+                        11
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.2",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        12,
+                        12
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.2",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        13,
+                        13
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.2",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        14,
+                        14
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.3",
+                "value_indexes": [
+                    [
+                        11,
+                        19
+                    ]
+                ],
+                "values": [
+                    "PrivUser"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        15,
+                        15
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.3",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        16,
+                        16
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.3",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        17,
+                        17
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.3",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        18,
+                        18
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.4",
+                "value_indexes": [
+                    [
+                        11,
+                        17
+                    ]
+                ],
+                "values": [
+                    "Server"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        19,
+                        19
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.4",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        20,
+                        20
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.4",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        21,
+                        21
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.4",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        22,
+                        22
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.5",
+                "value_indexes": [
+                    [
+                        11,
+                        25
+                    ]
+                ],
+                "values": [
+                    "ServiceAccount"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        23,
+                        23
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.5",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        24,
+                        24
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.5",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        25,
+                        25
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.5",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        26,
+                        26
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.6",
+                "value_indexes": [
+                    [
+                        11,
+                        15
+                    ]
+                ],
+                "values": [
+                    "User"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        27,
+                        27
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.6",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        28,
+                        28
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.6",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        29,
+                        29
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.6",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        30,
+                        30
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.7",
+                "value_indexes": [
+                    [
+                        11,
+                        22
+                    ]
+                ],
+                "values": [
+                    "Workstation"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        31,
+                        31
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.7",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        32,
+                        32
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.7",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        33,
+                        33
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.7",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        34,
+                        34
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.8",
+                "value_indexes": [
+                    [
+                        11,
+                        14
+                    ]
+                ],
+                "values": [
+                    "VDI"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        35,
+                        35
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.8",
+                "value_indexes": [
+                    [
+                        11,
+                        18
+                    ]
+                ],
+                "values": [
+                    "OU=ACME"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        36,
+                        36
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.8",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        37,
+                        37
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.8",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        38,
+                        38
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.9",
+                "value_indexes": [
+                    [
+                        11,
+                        23
+                    ]
+                ],
+                "values": [
+                    "EntPrivGroup"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        39,
+                        39
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.9",
+                "value_indexes": [
+                    [
+                        11,
+                        16
+                    ]
+                ],
+                "values": [
+                    "OU=IT"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        40,
+                        40
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.9",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        41,
+                        41
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.9",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        42,
+                        42
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.10",
+                "value_indexes": [
+                    [
+                        11,
+                        22
+                    ]
+                ],
+                "values": [
+                    "EntPrivUser"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        43,
+                        43
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.10",
+                "value_indexes": [
+                    [
+                        11,
+                        16
+                    ]
+                ],
+                "values": [
+                    "OU=IT"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        44,
+                        44
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.10",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        45,
+                        45
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.10",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        46,
+                        46
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.11",
+                "value_indexes": [
+                    [
+                        11,
+                        25
+                    ]
+                ],
+                "values": [
+                    "EntWorkstation"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        47,
+                        47
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.11",
+                "value_indexes": [
+                    [
+                        11,
+                        16
+                    ]
+                ],
+                "values": [
+                    "OU=IT"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        48,
+                        48
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.11",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        49,
+                        49
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.11",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        50,
+                        50
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name^"
+                ],
+                "scope": "g.0.12",
+                "value_indexes": [
+                    [
+                        11,
+                        28
+                    ]
+                ],
+                "values": [
+                    "EntServiceAccount"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        51,
+                        51
+                    ]
+                ],
+                "name": "path",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^path^"
+                ],
+                "scope": "g.0.12",
+                "value_indexes": [
+                    [
+                        11,
+                        16
+                    ]
+                ],
+                "values": [
+                    "OU=IT"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        52,
+                        52
+                    ]
+                ],
+                "name": "protectedFromAccidentalDeletion",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protectedFromAccidentalDeletion^"
+                ],
+                "scope": "g.0.12",
+                "value_indexes": [
+                    [
+                        38,
+                        42
+                    ]
+                ],
+                "values": [
+                    "TRUE"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        53,
+                        53
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description^"
+                ],
+                "scope": "g.0.12",
+                "value_indexes": [
+                    [
+                        18,
+                        20
+                    ]
+                ],
+                "values": [
+                    "''"
+                ]
+            }
+        ]
+    },
+    "file": "organizational_units:\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n",
+    "modified": "Wed, 07 Sep 2022 18:43:17 GMT",
+    "size": 1790,
+    "tags": [
+        "OS:Windows",
+        "Platform:AWS",
+        "Function:S3"
+    ]
+}
