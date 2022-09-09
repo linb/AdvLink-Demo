@@ -1,0 +1,3492 @@
+{
+    "designParameters": {
+        "design_name": {
+            "value": "workflow"
+        },
+        "scripts_data_folder": {
+            "value": "Parsed"
+        },
+        "workflows": {
+            "workflow": {
+                "commands": [
+                    {
+                        "design_parameters": {
+                            "block_count": 0,
+                            "blocks": [],
+                            "input_file": "NewFolder/organizational_units.yaml",
+                            "parse_time": "0:00:00.334663",
+                            "scopes": {
+                                "g": {
+                                    "declarations": {},
+                                    "end": 1351,
+                                    "index": 1,
+                                    "line": [
+                                        1,
+                                        54
+                                    ],
+                                    "name": "global",
+                                    "start": 0,
+                                    "type": "block"
+                                },
+                                "g.0": {
+                                    "end": 1351,
+                                    "index": 13,
+                                    "line": [
+                                        1,
+                                        53
+                                    ],
+                                    "name": "global.organizational_units",
+                                    "order": 13,
+                                    "scope": "g",
+                                    "start": 0,
+                                    "type": "ObjitemContext"
+                                },
+                                "g.0.0": {
+                                    "end": 119,
+                                    "index": 0,
+                                    "line": [
+                                        2,
+                                        5
+                                    ],
+                                    "name": "global.organizational_units.[0]",
+                                    "scope": "g.0",
+                                    "start": 25,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.1": {
+                                    "end": 211,
+                                    "index": 0,
+                                    "line": [
+                                        6,
+                                        9
+                                    ],
+                                    "name": "global.organizational_units.[1]",
+                                    "scope": "g.0",
+                                    "start": 119,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.10": {
+                                    "end": 1136,
+                                    "index": 0,
+                                    "line": [
+                                        42,
+                                        45
+                                    ],
+                                    "name": "global.organizational_units.[10]",
+                                    "scope": "g.0",
+                                    "start": 1032,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.11": {
+                                    "end": 1243,
+                                    "index": 0,
+                                    "line": [
+                                        46,
+                                        49
+                                    ],
+                                    "name": "global.organizational_units.[11]",
+                                    "scope": "g.0",
+                                    "start": 1136,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.12": {
+                                    "end": 1351,
+                                    "index": 0,
+                                    "line": [
+                                        50,
+                                        53
+                                    ],
+                                    "name": "global.organizational_units.[12]",
+                                    "scope": "g.0",
+                                    "start": 1243,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.2": {
+                                    "end": 311,
+                                    "index": 0,
+                                    "line": [
+                                        10,
+                                        13
+                                    ],
+                                    "name": "global.organizational_units.[2]",
+                                    "scope": "g.0",
+                                    "start": 211,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.3": {
+                                    "end": 414,
+                                    "index": 0,
+                                    "line": [
+                                        14,
+                                        17
+                                    ],
+                                    "name": "global.organizational_units.[3]",
+                                    "scope": "g.0",
+                                    "start": 311,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.4": {
+                                    "end": 515,
+                                    "index": 0,
+                                    "line": [
+                                        18,
+                                        21
+                                    ],
+                                    "name": "global.organizational_units.[4]",
+                                    "scope": "g.0",
+                                    "start": 414,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.5": {
+                                    "end": 624,
+                                    "index": 0,
+                                    "line": [
+                                        22,
+                                        25
+                                    ],
+                                    "name": "global.organizational_units.[5]",
+                                    "scope": "g.0",
+                                    "start": 515,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.6": {
+                                    "end": 723,
+                                    "index": 0,
+                                    "line": [
+                                        26,
+                                        29
+                                    ],
+                                    "name": "global.organizational_units.[6]",
+                                    "scope": "g.0",
+                                    "start": 624,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.7": {
+                                    "end": 829,
+                                    "index": 0,
+                                    "line": [
+                                        30,
+                                        33
+                                    ],
+                                    "name": "global.organizational_units.[7]",
+                                    "scope": "g.0",
+                                    "start": 723,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.8": {
+                                    "end": 927,
+                                    "index": 0,
+                                    "line": [
+                                        34,
+                                        37
+                                    ],
+                                    "name": "global.organizational_units.[8]",
+                                    "scope": "g.0",
+                                    "start": 829,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.9": {
+                                    "end": 1032,
+                                    "index": 0,
+                                    "line": [
+                                        38,
+                                        41
+                                    ],
+                                    "name": "global.organizational_units.[9]",
+                                    "scope": "g.0",
+                                    "start": 927,
+                                    "type": "ArritemContext"
+                                }
+                            },
+                            "script": "",
+                            "type": "dataset",
+                            "variable_count": 52,
+                            "variables": [
+                                {
+                                    "line_numbers": [
+                                        [
+                                            2,
+                                            2
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            15
+                                        ]
+                                    ],
+                                    "values": [
+                                        "ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            3,
+                                            3
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            13
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            4,
+                                            4
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            5,
+                                            5
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            6,
+                                            6
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            13
+                                        ]
+                                    ],
+                                    "values": [
+                                        "IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            7,
+                                            7
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            13
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            8,
+                                            8
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            9,
+                                            9
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            10,
+                                            10
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Group"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            11,
+                                            11
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            12,
+                                            12
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            13,
+                                            13
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            14,
+                                            14
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            19
+                                        ]
+                                    ],
+                                    "values": [
+                                        "PrivUser"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            15,
+                                            15
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            16,
+                                            16
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            17,
+                                            17
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            18,
+                                            18
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            17
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Server"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            19,
+                                            19
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            20,
+                                            20
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            21,
+                                            21
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            22,
+                                            22
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            25
+                                        ]
+                                    ],
+                                    "values": [
+                                        "ServiceAccount"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            23,
+                                            23
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            24,
+                                            24
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            25,
+                                            25
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            26,
+                                            26
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            15
+                                        ]
+                                    ],
+                                    "values": [
+                                        "User"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            27,
+                                            27
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            28,
+                                            28
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            29,
+                                            29
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            30,
+                                            30
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            22
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Workstation"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            31,
+                                            31
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            32,
+                                            32
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            33,
+                                            33
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            34,
+                                            34
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            14
+                                        ]
+                                    ],
+                                    "values": [
+                                        "VDI"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            35,
+                                            35
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            18
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=ACME"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            36,
+                                            36
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            37,
+                                            37
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            38,
+                                            38
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            23
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntPrivGroup"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            39,
+                                            39
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            40,
+                                            40
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            41,
+                                            41
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            42,
+                                            42
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            22
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntPrivUser"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            43,
+                                            43
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            44,
+                                            44
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            45,
+                                            45
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            46,
+                                            46
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            25
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntWorkstation"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            47,
+                                            47
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            48,
+                                            48
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            49,
+                                            49
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            50,
+                                            50
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            28
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntServiceAccount"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            51,
+                                            51
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            52,
+                                            52
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            53,
+                                            53
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                }
+                            ]
+                        },
+                        "features": {},
+                        "id": 0,
+                        "level": 0,
+                        "name": "organizational_units.yaml",
+                        "path": "",
+                        "pre": null,
+                        "script": "organizational_units:\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n",
+                        "scriptId": 0,
+                        "scriptPre": null,
+                        "size": null,
+                        "source": "library",
+                        "tags": [],
+                        "type": "dataset"
+                    },
+                    {
+                        "design_parameters": {
+                            "block_count": 0,
+                            "blocks": [],
+                            "input_file": "NewFolder/demo - datay.tf",
+                            "parse_time": "0:00:00.005598",
+                            "scopes": {
+                                "g": {
+                                    "declarations": {},
+                                    "end": 367,
+                                    "index": 2,
+                                    "line": [
+                                        3,
+                                        16
+                                    ],
+                                    "name": "global",
+                                    "start": 26,
+                                    "type": "file"
+                                },
+                                "g.0": {
+                                    "end": 193,
+                                    "index": 0,
+                                    "line": 3,
+                                    "name": "global.provider \"google1\"",
+                                    "scope": "g",
+                                    "start": 45,
+                                    "type": "BlockbodyContext"
+                                },
+                                "g.1": {
+                                    "end": 367,
+                                    "index": 0,
+                                    "line": 11,
+                                    "name": "global.provider \"google2\"",
+                                    "scope": "g",
+                                    "start": 219,
+                                    "type": "BlockbodyContext"
+                                }
+                            },
+                            "script": "",
+                            "type": "script",
+                            "variable_count": 8,
+                            "variables": [
+                                {
+                                    "line_numbers": [
+                                        [
+                                            4,
+                                            4
+                                        ]
+                                    ],
+                                    "name": "region",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^region.68eo3fws^"
+                                    ],
+                                    "scope": "g.0",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            27
+                                        ]
+                                    ],
+                                    "values": [
+                                        "var.region"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            5,
+                                            5
+                                        ]
+                                    ],
+                                    "name": "project",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^project.3kayamnx^"
+                                    ],
+                                    "scope": "g.0",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            33
+                                        ]
+                                    ],
+                                    "values": [
+                                        "var.project_name"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            6,
+                                            6
+                                        ]
+                                    ],
+                                    "name": "credentials",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^credentials.jm73rlrv^"
+                                    ],
+                                    "scope": "g.0",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            48
+                                        ]
+                                    ],
+                                    "values": [
+                                        "file(var.credentials_file_path)"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            7,
+                                            7
+                                        ]
+                                    ],
+                                    "name": "zone",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^zone.7riz57ri^"
+                                    ],
+                                    "scope": "g.0",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            32
+                                        ]
+                                    ],
+                                    "values": [
+                                        "var.region_zone"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            12,
+                                            12
+                                        ]
+                                    ],
+                                    "name": "region",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^region.5gdvj3gk^"
+                                    ],
+                                    "scope": "g.1",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            27
+                                        ]
+                                    ],
+                                    "values": [
+                                        "var.region"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            13,
+                                            13
+                                        ]
+                                    ],
+                                    "name": "project",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^project.9xeydz3k^"
+                                    ],
+                                    "scope": "g.1",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            33
+                                        ]
+                                    ],
+                                    "values": [
+                                        "var.project_name"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            14,
+                                            14
+                                        ]
+                                    ],
+                                    "name": "credentials",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^credentials.1fftjhv2^"
+                                    ],
+                                    "scope": "g.1",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            48
+                                        ]
+                                    ],
+                                    "values": [
+                                        "file(var.credentials_file_path)"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            15,
+                                            15
+                                        ]
+                                    ],
+                                    "name": "zone",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^zone.5a6bibkr^"
+                                    ],
+                                    "scope": "g.1",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            32
+                                        ]
+                                    ],
+                                    "values": [
+                                        "var.region_zone"
+                                    ]
+                                }
+                            ]
+                        },
+                        "features": {},
+                        "id": 1,
+                        "level": 0,
+                        "name": "demo - datay.tf",
+                        "path": "NewFolder",
+                        "pre": [
+                            0
+                        ],
+                        "script": " \r\n# single line comment\r\nprovider \"google1\" {\r\n  region      = ^region.68eo3fws^\r\n  project     = ^project.3kayamnx^\r\n  credentials = ^credentials.jm73rlrv^\r\n  zone        = ^zone.7riz57ri^\r\n}\r\n \r\n\r\nprovider \"google2\" {\r\n  region      = ^region.5gdvj3gk^\r\n  project     = ^project.9xeydz3k^\r\n  credentials = ^credentials.1fftjhv2^\r\n  zone        = ^zone.5a6bibkr^\r\n}\r\n ",
+                        "scriptId": 1,
+                        "scriptPre": [
+                            0
+                        ],
+                        "size": null,
+                        "source": "library",
+                        "tags": [],
+                        "type": "script"
+                    },
+                    {
+                        "design_parameters": {
+                            "block_count": 0,
+                            "blocks": [],
+                            "input_file": "ADSingleDomain.ps1",
+                            "notes": "",
+                            "parse_time": "00:00:00.0502800",
+                            "scopes": {
+                                "g": {
+                                    "declarations": {
+                                        "$base_dir": true,
+                                        "$config": true,
+                                        "$credential": true,
+                                        "$default_wait": true,
+                                        "$long_wait": true,
+                                        "$script": true,
+                                        "$script_array": true,
+                                        "$setup_file": true
+                                    },
+                                    "end": 6,
+                                    "index": 0,
+                                    "line": [
+                                        1,
+                                        63
+                                    ],
+                                    "name": "global",
+                                    "start": 1,
+                                    "type": "ScriptBlockAst"
+                                },
+                                "g.0": {
+                                    "declarations": {},
+                                    "end": 75,
+                                    "index": 0,
+                                    "line": [
+                                        16,
+                                        16
+                                    ],
+                                    "name": "global.BlockStatement#0",
+                                    "start": 16,
+                                    "type": "ScriptBlockAst"
+                                },
+                                "g.1": {
+                                    "declarations": {},
+                                    "end": 75,
+                                    "index": 0,
+                                    "line": [
+                                        17,
+                                        17
+                                    ],
+                                    "name": "global.BlockStatement#1",
+                                    "start": 16,
+                                    "type": "ScriptBlockAst"
+                                },
+                                "g.2": {
+                                    "declarations": {
+                                        "$Password": true
+                                    },
+                                    "end": 5,
+                                    "index": 0,
+                                    "line": [
+                                        22,
+                                        29
+                                    ],
+                                    "name": "global.BlockStatement#2",
+                                    "start": 29,
+                                    "type": "ScriptBlockAst"
+                                },
+                                "g.3": {
+                                    "declarations": {
+                                        "$Password": true,
+                                        "$credential": true
+                                    },
+                                    "end": 5,
+                                    "index": 0,
+                                    "line": [
+                                        37,
+                                        46
+                                    ],
+                                    "name": "global.BlockStatement#3",
+                                    "start": 29,
+                                    "type": "ScriptBlockAst"
+                                },
+                                "g.4": {
+                                    "declarations": {
+                                        "$full_path": true
+                                    },
+                                    "end": 2,
+                                    "index": 0,
+                                    "line": [
+                                        57,
+                                        61
+                                    ],
+                                    "name": "global.BlockStatement#4",
+                                    "start": 1,
+                                    "type": "ForEachStatementAst"
+                                }
+                            },
+                            "script": "_ps_file_t6dcrcyv",
+                            "type": "script",
+                            "variable_count": 12,
+                            "variables": [
+                                {
+                                    "line_numbers": [
+                                        [
+                                            5,
+                                            5
+                                        ]
+                                    ],
+                                    "name": "$config",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^CONFIG.ipj0y6h9^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            79
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Import-Yaml -FilePath \"C:\\code\\demo\\ModifedAD\\config\\scenario1.yaml\""
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            6,
+                                            6
+                                        ]
+                                    ],
+                                    "name": "$credential",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^CREDENTIAL.30lsgbhy^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            15,
+                                            43
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Get-Credential Administrator"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            7,
+                                            7
+                                        ]
+                                    ],
+                                    "name": "$default_wait",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^DEFAULT_WAIT.jmwd1gox^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            19
+                                        ]
+                                    ],
+                                    "values": [
+                                        "30"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            8,
+                                            8
+                                        ]
+                                    ],
+                                    "name": "$long_wait",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^LONG_WAIT.adarjil5^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            14,
+                                            17
+                                        ]
+                                    ],
+                                    "values": [
+                                        "360"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            11,
+                                            11
+                                        ]
+                                    ],
+                                    "name": "$setup_file",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^SETUP_FILE.da4ohm1x^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            15,
+                                            57
+                                        ]
+                                    ],
+                                    "values": [
+                                        "\"C:\\code\\demo\\ModifedAD\\scripts\\setup.ps1\""
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            19,
+                                            19
+                                        ],
+                                        [
+                                            34,
+                                            34
+                                        ]
+                                    ],
+                                    "name": "$script",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^SCRIPT.8dtcftzs^",
+                                        "^SCRIPT.j7bq92dw^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            54
+                                        ],
+                                        [
+                                            11,
+                                            54
+                                        ]
+                                    ],
+                                    "values": [
+                                        "\"Install-WindowsFeature AD-Domain-Services\"",
+                                        "\"Install-WindowsFeature AD-Domain-Services\""
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            23,
+                                            23
+                                        ]
+                                    ],
+                                    "name": "$Password",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^PASSWORD.dz5fa1xp^"
+                                    ],
+                                    "scope": "g.2",
+                                    "value_indexes": [
+                                        [
+                                            19,
+                                            84
+                                        ]
+                                    ],
+                                    "values": [
+                                        "(ConvertTo-SecureString -String \"1Password!\" -AsPlainText -Force)"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            38,
+                                            38
+                                        ]
+                                    ],
+                                    "name": "$Password",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^PASSWORD.6mw56eqh^"
+                                    ],
+                                    "scope": "g.3",
+                                    "value_indexes": [
+                                        [
+                                            16,
+                                            81
+                                        ]
+                                    ],
+                                    "values": [
+                                        "(ConvertTo-SecureString -String \"1Password!\" -AsPlainText -Force)"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            39,
+                                            39
+                                        ]
+                                    ],
+                                    "name": "$credential",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^CREDENTIAL.kb7c755k^"
+                                    ],
+                                    "scope": "g.3",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            56
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Get-Credential Scenario1\\Administrator"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            50,
+                                            50
+                                        ]
+                                    ],
+                                    "name": "$base_dir",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^BASE_DIR.dbnrsnts^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            13,
+                                            45
+                                        ]
+                                    ],
+                                    "values": [
+                                        "\"C:\\code\\demo\\ModifedAD\\scripts\""
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            51,
+                                            55
+                                        ]
+                                    ],
+                                    "name": "$script_array",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^SCRIPT_ARRAY.4hlnbf08^"
+                                    ],
+                                    "scope": "g",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            38
+                                        ]
+                                    ],
+                                    "values": [
+                                        "\"GPOs.ps1\",\r\n                \"OrganizationUnits.ps1\",\r\n                \"PasswordPolicies.ps1\",\r\n                \"ServiceGroups.ps1\",\r\n                \"ServiceAccounts.ps1\""
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            58,
+                                            58
+                                        ]
+                                    ],
+                                    "name": "$full_path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^FULL_PATH.fdqyktdp^"
+                                    ],
+                                    "scope": "g.4",
+                                    "value_indexes": [
+                                        [
+                                            17,
+                                            44
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Join-Path $base_dir $script"
+                                    ]
+                                }
+                            ]
+                        },
+                        "features": {},
+                        "id": 2,
+                        "level": 0,
+                        "name": "ADSingleDomain2.ps1",
+                        "path": "common",
+                        "pre": [
+                            1
+                        ],
+                        "script": "Import-Module -Name \"C:\\code\\demo\\ModifedAD\\common\\utility.psm1\"\r\n# make sure that we can connect to those machine in the network\r\nset-item wsman:\\localhost\\client\\trustedhosts -value '*' -force\r\n# provide our configuration\r\n$config = ^CONFIG.ipj0y6h9^\r\n$credential = ^CREDENTIAL.30lsgbhy^\r\n$default_wait = ^DEFAULT_WAIT.jmwd1gox^\r\n$long_wait = ^LONG_WAIT.adarjil5^\r\n# Setup Machines\r\nOut-Info \"Running Setup Scripts...\"\r\n$setup_file = ^SETUP_FILE.da4ohm1x^\r\nSubmit-ScriptFile $setup_file DC1-1 $credential $default_wait\r\nSubmit-ScriptFile $setup_file DC1-2 $credential $default_wait\r\n# copy files over\r\nOut-Info \"Copying Code...\"\r\nInvoke-Command { Robocopy.exe C:\\code \\\\DC1-1\\c$\\code\\ /s /nfl /ndl /njh }\r\nInvoke-Command { Robocopy.exe C:\\code \\\\DC1-2\\c$\\code\\ /s /nfl /ndl /njh }\r\nOut-Info \"Installing AD Services on DC1-1\"\r\n$script = ^SCRIPT.8dtcftzs^\r\nSubmit-Command $script DC1-1 $credential $default_wait\r\nOut-Info \"Installing AD DS Forest Services on DC1-1\"\r\nInvoke-Command -ScriptBlock {\r\n      $Password = ^PASSWORD.dz5fa1xp^\r\n      Install-ADDSForest `\r\n         -DomainName Scenario1.com `\r\n         -Confirm:$false `\r\n         -SafeModeAdministratorPassword $Password `\r\n         -Force `\r\n   } `\r\n   -ComputerName DC1-1 `\r\n   -Credential $credential\r\nWait-Timer $long_wait\r\nOut-Info \"Installing AD Services on DC1-2\"\r\n$script = ^SCRIPT.j7bq92dw^\r\nSubmit-Command $script DC1-2 $credential $default_wait\r\nOut-Info \"Installing AD Domain Controller on DC1-2\"\r\nInvoke-Command -ScriptBlock {\r\n   $Password = ^PASSWORD.6mw56eqh^\r\n   $credential = ^CREDENTIAL.kb7c755k^\r\n   Install-ADDSDomainController `\r\n      -InstallDNS `\r\n      -DomainName Scenario1.com `\r\n      -Credential $credential `\r\n      -SafeModeAdministratorPassword $Password `\r\n      -Force `\r\n   } `\r\n   -ComputerName DC1-2 `\r\n   -Credential $credential\r\nWait-Timer $default_wait\r\n$base_dir = ^BASE_DIR.dbnrsnts^\r\n$script_array = ^SCRIPT_ARRAY.4hlnbf08^\n\n\n\n\nOut-Info \"Running Scripts...\"\r\nforeach ($script in $script_array) {\r\n   $full_path = ^FULL_PATH.fdqyktdp^\r\n   Out-Info \"Running Script: $full_path\"\r\n   Submit-Command $full_path DC1-1 $credential $default_wait\r\n}\r\nOut-Info \"Completed.\"\r\n# EOF",
+                        "scriptId": 2,
+                        "scriptPre": [
+                            1
+                        ],
+                        "size": null,
+                        "source": "library",
+                        "tags": [],
+                        "type": "script"
+                    },
+                    {
+                        "design_parameters": {
+                            "block_count": 0,
+                            "blocks": [],
+                            "input_file": "PowerShell/AFRL/AD/organizational_units.yaml",
+                            "parse_time": "0:00:00.375063",
+                            "scopes": {
+                                "g": {
+                                    "declarations": {},
+                                    "end": 1314,
+                                    "index": 1,
+                                    "line": [
+                                        1,
+                                        54
+                                    ],
+                                    "name": "global",
+                                    "start": 0,
+                                    "type": "block"
+                                },
+                                "g.0": {
+                                    "end": 1314,
+                                    "index": 13,
+                                    "line": [
+                                        1,
+                                        53
+                                    ],
+                                    "name": "global.organizational_units",
+                                    "order": 13,
+                                    "scope": "g",
+                                    "start": 0,
+                                    "type": "ObjitemContext"
+                                },
+                                "g.0.0": {
+                                    "end": 116,
+                                    "index": 0,
+                                    "line": [
+                                        2,
+                                        5
+                                    ],
+                                    "name": "global.organizational_units.[0]",
+                                    "scope": "g.0",
+                                    "start": 24,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.1": {
+                                    "end": 204,
+                                    "index": 0,
+                                    "line": [
+                                        6,
+                                        9
+                                    ],
+                                    "name": "global.organizational_units.[1]",
+                                    "scope": "g.0",
+                                    "start": 116,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.10": {
+                                    "end": 1107,
+                                    "index": 0,
+                                    "line": [
+                                        42,
+                                        45
+                                    ],
+                                    "name": "global.organizational_units.[10]",
+                                    "scope": "g.0",
+                                    "start": 1007,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.11": {
+                                    "end": 1210,
+                                    "index": 0,
+                                    "line": [
+                                        46,
+                                        49
+                                    ],
+                                    "name": "global.organizational_units.[11]",
+                                    "scope": "g.0",
+                                    "start": 1107,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.12": {
+                                    "end": 1314,
+                                    "index": 0,
+                                    "line": [
+                                        50,
+                                        53
+                                    ],
+                                    "name": "global.organizational_units.[12]",
+                                    "scope": "g.0",
+                                    "start": 1210,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.2": {
+                                    "end": 302,
+                                    "index": 0,
+                                    "line": [
+                                        10,
+                                        13
+                                    ],
+                                    "name": "global.organizational_units.[2]",
+                                    "scope": "g.0",
+                                    "start": 204,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.3": {
+                                    "end": 403,
+                                    "index": 0,
+                                    "line": [
+                                        14,
+                                        17
+                                    ],
+                                    "name": "global.organizational_units.[3]",
+                                    "scope": "g.0",
+                                    "start": 302,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.4": {
+                                    "end": 502,
+                                    "index": 0,
+                                    "line": [
+                                        18,
+                                        21
+                                    ],
+                                    "name": "global.organizational_units.[4]",
+                                    "scope": "g.0",
+                                    "start": 403,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.5": {
+                                    "end": 609,
+                                    "index": 0,
+                                    "line": [
+                                        22,
+                                        25
+                                    ],
+                                    "name": "global.organizational_units.[5]",
+                                    "scope": "g.0",
+                                    "start": 502,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.6": {
+                                    "end": 706,
+                                    "index": 0,
+                                    "line": [
+                                        26,
+                                        29
+                                    ],
+                                    "name": "global.organizational_units.[6]",
+                                    "scope": "g.0",
+                                    "start": 609,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.7": {
+                                    "end": 810,
+                                    "index": 0,
+                                    "line": [
+                                        30,
+                                        33
+                                    ],
+                                    "name": "global.organizational_units.[7]",
+                                    "scope": "g.0",
+                                    "start": 706,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.8": {
+                                    "end": 906,
+                                    "index": 0,
+                                    "line": [
+                                        34,
+                                        37
+                                    ],
+                                    "name": "global.organizational_units.[8]",
+                                    "scope": "g.0",
+                                    "start": 810,
+                                    "type": "ArritemContext"
+                                },
+                                "g.0.9": {
+                                    "end": 1007,
+                                    "index": 0,
+                                    "line": [
+                                        38,
+                                        41
+                                    ],
+                                    "name": "global.organizational_units.[9]",
+                                    "scope": "g.0",
+                                    "start": 906,
+                                    "type": "ArritemContext"
+                                }
+                            },
+                            "script": "",
+                            "type": "dataset",
+                            "variable_count": 52,
+                            "variables": [
+                                {
+                                    "line_numbers": [
+                                        [
+                                            3,
+                                            3
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            13
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            2,
+                                            2
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            17
+                                        ]
+                                    ],
+                                    "values": [
+                                        "AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            5,
+                                            5
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            4,
+                                            4
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.0",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            7,
+                                            7
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            13
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            6,
+                                            6
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            13
+                                        ]
+                                    ],
+                                    "values": [
+                                        "IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            9,
+                                            9
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            8,
+                                            8
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.1",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            11,
+                                            11
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            10,
+                                            10
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Group"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            13,
+                                            13
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            12,
+                                            12
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.2",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            15,
+                                            15
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            14,
+                                            14
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            19
+                                        ]
+                                    ],
+                                    "values": [
+                                        "PrivUser"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            17,
+                                            17
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            16,
+                                            16
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.3",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            19,
+                                            19
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            18,
+                                            18
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            17
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Server"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            21,
+                                            21
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            20,
+                                            20
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.4",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            23,
+                                            23
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            22,
+                                            22
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            25
+                                        ]
+                                    ],
+                                    "values": [
+                                        "ServiceAccount"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            25,
+                                            25
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            24,
+                                            24
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.5",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            27,
+                                            27
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            26,
+                                            26
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            15
+                                        ]
+                                    ],
+                                    "values": [
+                                        "User"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            29,
+                                            29
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            28,
+                                            28
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.6",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            31,
+                                            31
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            30,
+                                            30
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            22
+                                        ]
+                                    ],
+                                    "values": [
+                                        "Workstation"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            33,
+                                            33
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            32,
+                                            32
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.7",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            35,
+                                            35
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=AFDCGS"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            34,
+                                            34
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            14
+                                        ]
+                                    ],
+                                    "values": [
+                                        "VDI"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            37,
+                                            37
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            36,
+                                            36
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.8",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            39,
+                                            39
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            38,
+                                            38
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            23
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntPrivGroup"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            41,
+                                            41
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            40,
+                                            40
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.9",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            43,
+                                            43
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            42,
+                                            42
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            22
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntPrivUser"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            45,
+                                            45
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            44,
+                                            44
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.10",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            47,
+                                            47
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            46,
+                                            46
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            25
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntWorkstation"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            49,
+                                            49
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            48,
+                                            48
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.11",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            51,
+                                            51
+                                        ]
+                                    ],
+                                    "name": "path",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^path^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            16
+                                        ]
+                                    ],
+                                    "values": [
+                                        "OU=IT"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            50,
+                                            50
+                                        ]
+                                    ],
+                                    "name": "name",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^name^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            11,
+                                            28
+                                        ]
+                                    ],
+                                    "values": [
+                                        "EntServiceAccount"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            53,
+                                            53
+                                        ]
+                                    ],
+                                    "name": "description",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^description^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            18,
+                                            20
+                                        ]
+                                    ],
+                                    "values": [
+                                        "''"
+                                    ]
+                                },
+                                {
+                                    "line_numbers": [
+                                        [
+                                            52,
+                                            52
+                                        ]
+                                    ],
+                                    "name": "protectedFromAccidentalDeletion",
+                                    "ontology": "Unknown",
+                                    "replacement_names": [
+                                        "^protectedFromAccidentalDeletion^"
+                                    ],
+                                    "scope": "g.0.12",
+                                    "value_indexes": [
+                                        [
+                                            38,
+                                            42
+                                        ]
+                                    ],
+                                    "values": [
+                                        "TRUE"
+                                    ]
+                                }
+                            ]
+                        },
+                        "features": {},
+                        "id": 3,
+                        "level": 0,
+                        "name": "organizational_units.yaml",
+                        "path": "common/PowerShell/AFRL/AD",
+                        "pre": [
+                            2
+                        ],
+                        "script": "organizational_units:\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n  - name: ^name^\n    path: ^path^\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\n    description: ^description^\n",
+                        "scriptId": 3,
+                        "scriptPre": [
+                            2
+                        ],
+                        "size": null,
+                        "source": "library",
+                        "tags": [],
+                        "type": "dataset"
+                    }
+                ],
+                "dependencies": [],
+                "name": "workflow.yml",
+                "type": "yaml"
+            }
+        }
+    },
+    "file": "[\n    {\n        \"source\": \"library\",\n        \"script\": \"organizational_units:\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n\"\n    },\n    {\n        \"source\": \"library\",\n        \"script\": \" \\r\\n# single line comment\\r\\nprovider \\\"google1\\\" {\\r\\n  region      = ^region.68eo3fws^\\r\\n  project     = ^project.3kayamnx^\\r\\n  credentials = ^credentials.jm73rlrv^\\r\\n  zone        = ^zone.7riz57ri^\\r\\n}\\r\\n \\r\\n\\r\\nprovider \\\"google2\\\" {\\r\\n  region      = ^region.5gdvj3gk^\\r\\n  project     = ^project.9xeydz3k^\\r\\n  credentials = ^credentials.1fftjhv2^\\r\\n  zone        = ^zone.5a6bibkr^\\r\\n}\\r\\n \"\n    },\n    {\n        \"source\": \"library\",\n        \"script\": \"Import-Module -Name \\\"C:\\\\code\\\\demo\\\\ModifedAD\\\\common\\\\utility.psm1\\\"\\r\\n# make sure that we can connect to those machine in the network\\r\\nset-item wsman:\\\\localhost\\\\client\\\\trustedhosts -value '*' -force\\r\\n# provide our configuration\\r\\n$config = ^CONFIG.ipj0y6h9^\\r\\n$credential = ^CREDENTIAL.30lsgbhy^\\r\\n$default_wait = ^DEFAULT_WAIT.jmwd1gox^\\r\\n$long_wait = ^LONG_WAIT.adarjil5^\\r\\n# Setup Machines\\r\\nOut-Info \\\"Running Setup Scripts...\\\"\\r\\n$setup_file = ^SETUP_FILE.da4ohm1x^\\r\\nSubmit-ScriptFile $setup_file DC1-1 $credential $default_wait\\r\\nSubmit-ScriptFile $setup_file DC1-2 $credential $default_wait\\r\\n# copy files over\\r\\nOut-Info \\\"Copying Code...\\\"\\r\\nInvoke-Command { Robocopy.exe C:\\\\code \\\\\\\\DC1-1\\\\c$\\\\code\\\\ /s /nfl /ndl /njh }\\r\\nInvoke-Command { Robocopy.exe C:\\\\code \\\\\\\\DC1-2\\\\c$\\\\code\\\\ /s /nfl /ndl /njh }\\r\\nOut-Info \\\"Installing AD Services on DC1-1\\\"\\r\\n$script = ^SCRIPT.8dtcftzs^\\r\\nSubmit-Command $script DC1-1 $credential $default_wait\\r\\nOut-Info \\\"Installing AD DS Forest Services on DC1-1\\\"\\r\\nInvoke-Command -ScriptBlock {\\r\\n      $Password = ^PASSWORD.dz5fa1xp^\\r\\n      Install-ADDSForest `\\r\\n         -DomainName Scenario1.com `\\r\\n         -Confirm:$false `\\r\\n         -SafeModeAdministratorPassword $Password `\\r\\n         -Force `\\r\\n   } `\\r\\n   -ComputerName DC1-1 `\\r\\n   -Credential $credential\\r\\nWait-Timer $long_wait\\r\\nOut-Info \\\"Installing AD Services on DC1-2\\\"\\r\\n$script = ^SCRIPT.j7bq92dw^\\r\\nSubmit-Command $script DC1-2 $credential $default_wait\\r\\nOut-Info \\\"Installing AD Domain Controller on DC1-2\\\"\\r\\nInvoke-Command -ScriptBlock {\\r\\n   $Password = ^PASSWORD.6mw56eqh^\\r\\n   $credential = ^CREDENTIAL.kb7c755k^\\r\\n   Install-ADDSDomainController `\\r\\n      -InstallDNS `\\r\\n      -DomainName Scenario1.com `\\r\\n      -Credential $credential `\\r\\n      -SafeModeAdministratorPassword $Password `\\r\\n      -Force `\\r\\n   } `\\r\\n   -ComputerName DC1-2 `\\r\\n   -Credential $credential\\r\\nWait-Timer $default_wait\\r\\n$base_dir = ^BASE_DIR.dbnrsnts^\\r\\n$script_array = ^SCRIPT_ARRAY.4hlnbf08^\\n\\n\\n\\n\\nOut-Info \\\"Running Scripts...\\\"\\r\\nforeach ($script in $script_array) {\\r\\n   $full_path = ^FULL_PATH.fdqyktdp^\\r\\n   Out-Info \\\"Running Script: $full_path\\\"\\r\\n   Submit-Command $full_path DC1-1 $credential $default_wait\\r\\n}\\r\\nOut-Info \\\"Completed.\\\"\\r\\n# EOF\"\n    },\n    {\n        \"source\": \"library\",\n        \"script\": \"organizational_units:\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n  - name: ^name^\\n    path: ^path^\\n    protectedFromAccidentalDeletion: ^protectedFromAccidentalDeletion^\\n    description: ^description^\\n\"\n    }\n]",
+    "modified": "Fri, 09 Sep 2022 15:46:36 GMT",
+    "size": 6679,
+    "tags": [
+        "price:2"
+    ]
+}
