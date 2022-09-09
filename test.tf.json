@@ -1,0 +1,2228 @@
+{
+    "designParameters": {
+        "block_count": 0,
+        "blocks": [],
+        "error": [
+            {
+                "column": 29,
+                "line": 221,
+                "msg": "token recognition error at: '''",
+                "type": "syntax error"
+            },
+            {
+                "column": 105,
+                "line": 221,
+                "msg": "token recognition error at: '''",
+                "type": "syntax error"
+            },
+            {
+                "column": 29,
+                "line": 222,
+                "msg": "token recognition error at: '''",
+                "type": "syntax error"
+            },
+            {
+                "column": 107,
+                "line": 222,
+                "msg": "token recognition error at: '''",
+                "type": "syntax error"
+            },
+            {
+                "column": 21,
+                "line": 211,
+                "msg": "no viable alternative at input 'sudoapt'",
+                "type": "syntax error"
+            }
+        ],
+        "input_file": "test.tf",
+        "parse_time": "0:00:00.109042",
+        "scopes": {
+            "g": {
+                "declarations": {},
+                "end": 6843,
+                "index": 16,
+                "line": [
+                    15,
+                    257
+                ],
+                "name": "global",
+                "start": 658,
+                "type": "file"
+            },
+            "g.0": {
+                "end": 859,
+                "index": 1,
+                "line": 15,
+                "name": "global.provider \"aws\"",
+                "scope": "g",
+                "start": 673,
+                "type": "BlockbodyContext"
+            },
+            "g.0.0": {
+                "end": 856,
+                "index": 0,
+                "line": 19,
+                "name": "global.provider \"aws\".default_tags",
+                "scope": "g.0",
+                "start": 797,
+                "type": "BlockbodyContext"
+            },
+            "g.1": {
+                "end": 1108,
+                "index": 0,
+                "line": 29,
+                "name": "global.resource \"aws_vpc\" \"spotvpc\"",
+                "scope": "g",
+                "start": 939,
+                "type": "BlockbodyContext"
+            },
+            "g.10": {
+                "end": 6141,
+                "index": 0,
+                "line": 230,
+                "name": "global.output \"spotip\"",
+                "scope": "g",
+                "start": 6099,
+                "type": "BlockbodyContext"
+            },
+            "g.11": {
+                "end": 6231,
+                "index": 0,
+                "line": 234,
+                "name": "global.output \"spotprivateip\"",
+                "scope": "g",
+                "start": 6168,
+                "type": "BlockbodyContext"
+            },
+            "g.12": {
+                "end": 6317,
+                "index": 0,
+                "line": 238,
+                "name": "global.output \"publicdns\"",
+                "scope": "g",
+                "start": 6254,
+                "type": "BlockbodyContext"
+            },
+            "g.13": {
+                "end": 6406,
+                "index": 0,
+                "line": 242,
+                "name": "global.output \"spotid\"",
+                "scope": "g",
+                "start": 6337,
+                "type": "BlockbodyContext"
+            },
+            "g.14": {
+                "end": 6605,
+                "index": 0,
+                "line": 247,
+                "name": "global.data \"aws_route53_zone\" \"selected\"",
+                "scope": "g",
+                "start": 6544,
+                "type": "BlockbodyContext"
+            },
+            "g.15": {
+                "end": 6843,
+                "index": 0,
+                "line": 251,
+                "name": "global.resource \"aws_route53_record\" \"spot\"",
+                "scope": "g",
+                "start": 6644,
+                "type": "BlockbodyContext"
+            },
+            "g.2": {
+                "end": 1320,
+                "index": 0,
+                "line": 42,
+                "name": "global.resource \"aws_internet_gateway\" \"spotgw\"",
+                "scope": "g",
+                "start": 1220,
+                "type": "BlockbodyContext"
+            },
+            "g.3": {
+                "end": 1614,
+                "index": 1,
+                "line": 53,
+                "name": "global.resource \"aws_route_table\" \"spotroutetable\"",
+                "scope": "g",
+                "start": 1419,
+                "type": "BlockbodyContext"
+            },
+            "g.3.0": {
+                "end": 1548,
+                "index": 0,
+                "line": 56,
+                "name": "global.resource \"aws_route_table\" \"spotroutetable\".route",
+                "scope": "g.3",
+                "start": 1463,
+                "type": "BlockbodyContext"
+            },
+            "g.4": {
+                "end": 1850,
+                "index": 0,
+                "line": 69,
+                "name": "global.resource \"aws_subnet\" \"uno\"",
+                "scope": "g",
+                "start": 1684,
+                "type": "BlockbodyContext"
+            },
+            "g.5": {
+                "end": 2060,
+                "index": 0,
+                "line": 82,
+                "name": "global.resource \"aws_route_table_association\" \"subnet-association\"",
+                "scope": "g",
+                "start": 1964,
+                "type": "BlockbodyContext"
+            },
+            "g.6": {
+                "end": 3052,
+                "index": 4,
+                "line": 88,
+                "name": "global.resource \"aws_security_group\" \"spotsg\"",
+                "scope": "g",
+                "start": 2180,
+                "type": "BlockbodyContext"
+            },
+            "g.6.0": {
+                "end": 2511,
+                "index": 0,
+                "line": 93,
+                "name": "global.resource \"aws_security_group\" \"spotsg\".ingress",
+                "scope": "g.6",
+                "start": 2336,
+                "type": "BlockbodyContext"
+            },
+            "g.6.1": {
+                "end": 2697,
+                "index": 0,
+                "line": 105,
+                "name": "global.resource \"aws_security_group\" \"spotsg\".ingress",
+                "scope": "g.6",
+                "start": 2525,
+                "type": "BlockbodyContext"
+            },
+            "g.6.2": {
+                "end": 2882,
+                "index": 0,
+                "line": 117,
+                "name": "global.resource \"aws_security_group\" \"spotsg\".ingress",
+                "scope": "g.6",
+                "start": 2711,
+                "type": "BlockbodyContext"
+            },
+            "g.6.3": {
+                "end": 3000,
+                "index": 0,
+                "line": 129,
+                "name": "global.resource \"aws_security_group\" \"spotsg\".egress",
+                "scope": "g.6",
+                "start": 2895,
+                "type": "BlockbodyContext"
+            },
+            "g.7": {
+                "end": 3334,
+                "index": 0,
+                "line": 144,
+                "name": "global.resource \"aws_network_interface\" \"spotnic\"",
+                "scope": "g",
+                "start": 3146,
+                "type": "BlockbodyContext"
+            },
+            "g.8": {
+                "end": 3670,
+                "index": 0,
+                "line": 157,
+                "name": "global.resource \"aws_eip\" \"publicip\"",
+                "scope": "g",
+                "start": 3414,
+                "type": "BlockbodyContext"
+            },
+            "g.9": {
+                "end": 6038,
+                "index": 1,
+                "line": 172,
+                "name": "global.resource \"aws_spot_instance_request\" \"spotserver\"",
+                "scope": "g",
+                "start": 3798,
+                "type": "BlockbodyContext"
+            },
+            "g.9.0": {
+                "end": 4291,
+                "index": 0,
+                "line": 188,
+                "name": "global.resource \"aws_spot_instance_request\" \"spotserver\".network_interface",
+                "scope": "g.9",
+                "start": 4194,
+                "type": "BlockbodyContext"
+            }
+        },
+        "script": "",
+        "type": "configuration",
+        "variable_count": 85,
+        "variables": [
+            {
+                "line_numbers": [
+                    [
+                        16,
+                        16
+                    ]
+                ],
+                "name": "region",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^region.hthn9jww^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        16,
+                        30
+                    ]
+                ],
+                "values": [
+                    "\"ca-central-1\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        17,
+                        17
+                    ]
+                ],
+                "name": "access_key",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^access_key.2r15cm4q^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        16,
+                        31
+                    ]
+                ],
+                "values": [
+                    "\"aCceSSkeYHerE\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        18,
+                        18
+                    ]
+                ],
+                "name": "secret_key",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^secret_key.6rub1974^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        16,
+                        42
+                    ]
+                ],
+                "values": [
+                    "\"s3cr3TAcc3$$K3yG035H3r3.\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        20,
+                        22
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.8bfls0tf^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        12,
+                        48
+                    ]
+                ],
+                "values": [
+                    "{\r\n     use = \"Spot Instance\"\r\n    }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        21,
+                        21
+                    ]
+                ],
+                "name": "use",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^use.i1h6fj2x^"
+                ],
+                "scope": "g.0.0",
+                "value_indexes": [
+                    [
+                        12,
+                        27
+                    ]
+                ],
+                "values": [
+                    "\"Spot Instance\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        30,
+                        30
+                    ]
+                ],
+                "name": "cidr_block",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_block.hw3jwciv^"
+                ],
+                "scope": "g.1",
+                "value_indexes": [
+                    [
+                        26,
+                        41
+                    ]
+                ],
+                "values": [
+                    "\"10.128.0.0/16\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        31,
+                        31
+                    ]
+                ],
+                "name": "enable_dns_hostnames",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^enable_dns_hostnames.j14sleqa^"
+                ],
+                "scope": "g.1",
+                "value_indexes": [
+                    [
+                        26,
+                        30
+                    ]
+                ],
+                "values": [
+                    "true"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        32,
+                        32
+                    ]
+                ],
+                "name": "enable_dns_support",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^enable_dns_support.ew5p3a6f^"
+                ],
+                "scope": "g.1",
+                "value_indexes": [
+                    [
+                        26,
+                        30
+                    ]
+                ],
+                "values": [
+                    "true"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        34,
+                        36
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.eokxqnf2^"
+                ],
+                "scope": "g.1",
+                "value_indexes": [
+                    [
+                        10,
+                        54
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Spot Playground EC2 VPC\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        35,
+                        35
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.hb5l97gd^"
+                ],
+                "scope": "g.1",
+                "value_indexes": [
+                    [
+                        12,
+                        37
+                    ]
+                ],
+                "values": [
+                    "\"Spot Playground EC2 VPC\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        43,
+                        43
+                    ]
+                ],
+                "name": "vpc_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^vpc_id.8nxq9b3f^"
+                ],
+                "scope": "g.2",
+                "value_indexes": [
+                    [
+                        12,
+                        30
+                    ]
+                ],
+                "values": [
+                    "aws_vpc.spotvpc.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        45,
+                        47
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.1lxxctrm^"
+                ],
+                "scope": "g.2",
+                "value_indexes": [
+                    [
+                        10,
+                        58
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Spot Playground VPC Gateway\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        46,
+                        46
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.a5rq5zmi^"
+                ],
+                "scope": "g.2",
+                "value_indexes": [
+                    [
+                        12,
+                        41
+                    ]
+                ],
+                "values": [
+                    "\"Spot Playground VPC Gateway\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        54,
+                        54
+                    ]
+                ],
+                "name": "vpc_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^vpc_id.irzp5l9a^"
+                ],
+                "scope": "g.3",
+                "value_indexes": [
+                    [
+                        12,
+                        30
+                    ]
+                ],
+                "values": [
+                    "aws_vpc.spotvpc.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        57,
+                        57
+                    ]
+                ],
+                "name": "cidr_block",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_block.j1m2m7w9^"
+                ],
+                "scope": "g.3.0",
+                "value_indexes": [
+                    [
+                        18,
+                        29
+                    ]
+                ],
+                "values": [
+                    "\"0.0.0.0/0\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        58,
+                        58
+                    ]
+                ],
+                "name": "gateway_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^gateway_id.be6bsmfq^"
+                ],
+                "scope": "g.3.0",
+                "value_indexes": [
+                    [
+                        18,
+                        48
+                    ]
+                ],
+                "values": [
+                    "aws_internet_gateway.spotgw.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        61,
+                        63
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.f95dex0p^"
+                ],
+                "scope": "g.3",
+                "value_indexes": [
+                    [
+                        10,
+                        56
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Spot VPC Internet Gateway\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        62,
+                        62
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.acqyacx1^"
+                ],
+                "scope": "g.3",
+                "value_indexes": [
+                    [
+                        12,
+                        39
+                    ]
+                ],
+                "values": [
+                    "\"Spot VPC Internet Gateway\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        70,
+                        70
+                    ]
+                ],
+                "name": "vpc_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^vpc_id.1wxwk22k^"
+                ],
+                "scope": "g.4",
+                "value_indexes": [
+                    [
+                        23,
+                        41
+                    ]
+                ],
+                "values": [
+                    "aws_vpc.spotvpc.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        71,
+                        71
+                    ]
+                ],
+                "name": "cidr_block",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_block.6n8f8rnn^"
+                ],
+                "scope": "g.4",
+                "value_indexes": [
+                    [
+                        23,
+                        39
+                    ]
+                ],
+                "values": [
+                    "\"10.128.10.0/24\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        72,
+                        72
+                    ]
+                ],
+                "name": "availability_zone",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^availability_zone.8jw01cze^"
+                ],
+                "scope": "g.4",
+                "value_indexes": [
+                    [
+                        23,
+                        38
+                    ]
+                ],
+                "values": [
+                    "\"ca-central-1d\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        74,
+                        76
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.ci1glvz^"
+                ],
+                "scope": "g.4",
+                "value_indexes": [
+                    [
+                        10,
+                        34
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Uno\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        75,
+                        75
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.e9bss1e^"
+                ],
+                "scope": "g.4",
+                "value_indexes": [
+                    [
+                        12,
+                        17
+                    ]
+                ],
+                "values": [
+                    "\"Uno\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        83,
+                        83
+                    ]
+                ],
+                "name": "subnet_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^subnet_id.8x1j5pvy^"
+                ],
+                "scope": "g.5",
+                "value_indexes": [
+                    [
+                        20,
+                        37
+                    ]
+                ],
+                "values": [
+                    "aws_subnet.uno.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        84,
+                        84
+                    ]
+                ],
+                "name": "route_table_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^route_table_id.ivaej7vk^"
+                ],
+                "scope": "g.5",
+                "value_indexes": [
+                    [
+                        20,
+                        53
+                    ]
+                ],
+                "values": [
+                    "aws_route_table.spotroutetable.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        89,
+                        89
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name.6ky3agee^"
+                ],
+                "scope": "g.6",
+                "value_indexes": [
+                    [
+                        17,
+                        32
+                    ]
+                ],
+                "values": [
+                    "\"allow-spot-sg\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        90,
+                        90
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description.2j74u7l^"
+                ],
+                "scope": "g.6",
+                "value_indexes": [
+                    [
+                        17,
+                        71
+                    ]
+                ],
+                "values": [
+                    "\"Ports 22, 80 and 443 are open in this Security Group\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        91,
+                        91
+                    ]
+                ],
+                "name": "vpc_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^vpc_id.iej0n5hs^"
+                ],
+                "scope": "g.6",
+                "value_indexes": [
+                    [
+                        17,
+                        35
+                    ]
+                ],
+                "values": [
+                    "aws_vpc.spotvpc.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        94,
+                        96
+                    ]
+                ],
+                "name": "cidr_blocks",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_blocks.d42mv7pj^"
+                ],
+                "scope": "g.6.0",
+                "value_indexes": [
+                    [
+                        19,
+                        46
+                    ]
+                ],
+                "values": [
+                    "[\r\n      \"0.0.0.0/0\"\r\n    ]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        99,
+                        99
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description.3vbvod0m^"
+                ],
+                "scope": "g.6.0",
+                "value_indexes": [
+                    [
+                        19,
+                        46
+                    ]
+                ],
+                "values": [
+                    "\"HTTPS traffic on Spot VPC\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        100,
+                        100
+                    ]
+                ],
+                "name": "from_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^from_port.7j27y4de^"
+                ],
+                "scope": "g.6.0",
+                "value_indexes": [
+                    [
+                        19,
+                        22
+                    ]
+                ],
+                "values": [
+                    "443"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        101,
+                        101
+                    ]
+                ],
+                "name": "to_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^to_port.gp8gyau3^"
+                ],
+                "scope": "g.6.0",
+                "value_indexes": [
+                    [
+                        19,
+                        22
+                    ]
+                ],
+                "values": [
+                    "443"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        102,
+                        102
+                    ]
+                ],
+                "name": "protocol",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protocol.ikkic71^"
+                ],
+                "scope": "g.6.0",
+                "value_indexes": [
+                    [
+                        19,
+                        24
+                    ]
+                ],
+                "values": [
+                    "\"tcp\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        106,
+                        108
+                    ]
+                ],
+                "name": "cidr_blocks",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_blocks.bt8hsdi1^"
+                ],
+                "scope": "g.6.1",
+                "value_indexes": [
+                    [
+                        19,
+                        46
+                    ]
+                ],
+                "values": [
+                    "[\r\n      \"0.0.0.0/0\"\r\n    ]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        111,
+                        111
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description.730aieb0^"
+                ],
+                "scope": "g.6.1",
+                "value_indexes": [
+                    [
+                        19,
+                        45
+                    ]
+                ],
+                "values": [
+                    "\"HTTP traffic on Spot VPC\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        112,
+                        112
+                    ]
+                ],
+                "name": "from_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^from_port.7p6f5wpa^"
+                ],
+                "scope": "g.6.1",
+                "value_indexes": [
+                    [
+                        19,
+                        21
+                    ]
+                ],
+                "values": [
+                    "80"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        113,
+                        113
+                    ]
+                ],
+                "name": "to_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^to_port.7a48rjmh^"
+                ],
+                "scope": "g.6.1",
+                "value_indexes": [
+                    [
+                        19,
+                        21
+                    ]
+                ],
+                "values": [
+                    "80"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        114,
+                        114
+                    ]
+                ],
+                "name": "protocol",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protocol.kcadb4pn^"
+                ],
+                "scope": "g.6.1",
+                "value_indexes": [
+                    [
+                        19,
+                        24
+                    ]
+                ],
+                "values": [
+                    "\"tcp\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        118,
+                        120
+                    ]
+                ],
+                "name": "cidr_blocks",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_blocks.birj2ll8^"
+                ],
+                "scope": "g.6.2",
+                "value_indexes": [
+                    [
+                        19,
+                        46
+                    ]
+                ],
+                "values": [
+                    "[\r\n      \"0.0.0.0/0\"\r\n    ]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        123,
+                        123
+                    ]
+                ],
+                "name": "description",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^description.h6qow10x^"
+                ],
+                "scope": "g.6.2",
+                "value_indexes": [
+                    [
+                        19,
+                        44
+                    ]
+                ],
+                "values": [
+                    "\"SSH traffic on Spot VPC\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        124,
+                        124
+                    ]
+                ],
+                "name": "from_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^from_port.eddtukzy^"
+                ],
+                "scope": "g.6.2",
+                "value_indexes": [
+                    [
+                        19,
+                        21
+                    ]
+                ],
+                "values": [
+                    "22"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        125,
+                        125
+                    ]
+                ],
+                "name": "to_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^to_port.blpljdzi^"
+                ],
+                "scope": "g.6.2",
+                "value_indexes": [
+                    [
+                        19,
+                        21
+                    ]
+                ],
+                "values": [
+                    "22"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        126,
+                        126
+                    ]
+                ],
+                "name": "protocol",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protocol.6yb16cv4^"
+                ],
+                "scope": "g.6.2",
+                "value_indexes": [
+                    [
+                        19,
+                        24
+                    ]
+                ],
+                "values": [
+                    "\"tcp\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        130,
+                        130
+                    ]
+                ],
+                "name": "from_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^from_port.h12klq5e^"
+                ],
+                "scope": "g.6.3",
+                "value_indexes": [
+                    [
+                        19,
+                        20
+                    ]
+                ],
+                "values": [
+                    "0"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        131,
+                        131
+                    ]
+                ],
+                "name": "to_port",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^to_port.286z72x5^"
+                ],
+                "scope": "g.6.3",
+                "value_indexes": [
+                    [
+                        19,
+                        20
+                    ]
+                ],
+                "values": [
+                    "0"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        132,
+                        132
+                    ]
+                ],
+                "name": "protocol",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^protocol.jd26b139^"
+                ],
+                "scope": "g.6.3",
+                "value_indexes": [
+                    [
+                        19,
+                        23
+                    ]
+                ],
+                "values": [
+                    "\"-1\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        133,
+                        133
+                    ]
+                ],
+                "name": "cidr_blocks",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^cidr_blocks.f1fmciu1^"
+                ],
+                "scope": "g.6.3",
+                "value_indexes": [
+                    [
+                        19,
+                        32
+                    ]
+                ],
+                "values": [
+                    "[\"0.0.0.0/0\"]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        136,
+                        138
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.5oy11s22^"
+                ],
+                "scope": "g.6",
+                "value_indexes": [
+                    [
+                        10,
+                        42
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Spot VPC SG\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        137,
+                        137
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.d1q8z93m^"
+                ],
+                "scope": "g.6",
+                "value_indexes": [
+                    [
+                        12,
+                        25
+                    ]
+                ],
+                "values": [
+                    "\"Spot VPC SG\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        145,
+                        145
+                    ]
+                ],
+                "name": "subnet_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^subnet_id.cgy6cuq0^"
+                ],
+                "scope": "g.7",
+                "value_indexes": [
+                    [
+                        21,
+                        38
+                    ]
+                ],
+                "values": [
+                    "aws_subnet.uno.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        146,
+                        146
+                    ]
+                ],
+                "name": "private_ips",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^private_ips.40q2aeou^"
+                ],
+                "scope": "g.7",
+                "value_indexes": [
+                    [
+                        21,
+                        37
+                    ]
+                ],
+                "values": [
+                    "[\"10.128.10.10\"]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        147,
+                        147
+                    ]
+                ],
+                "name": "security_groups",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^security_groups.hxqjxpjx^"
+                ],
+                "scope": "g.7",
+                "value_indexes": [
+                    [
+                        21,
+                        51
+                    ]
+                ],
+                "values": [
+                    "[aws_security_group.spotsg.id]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        149,
+                        151
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.3pevo2is^"
+                ],
+                "scope": "g.7",
+                "value_indexes": [
+                    [
+                        10,
+                        48
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Network Interface\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        150,
+                        150
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.hi197jf^"
+                ],
+                "scope": "g.7",
+                "value_indexes": [
+                    [
+                        12,
+                        31
+                    ]
+                ],
+                "values": [
+                    "\"Network Interface\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        158,
+                        158
+                    ]
+                ],
+                "name": "vpc",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^vpc.1ejpolrb^"
+                ],
+                "scope": "g.8",
+                "value_indexes": [
+                    [
+                        31,
+                        35
+                    ]
+                ],
+                "values": [
+                    "true"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        159,
+                        159
+                    ]
+                ],
+                "name": "network_interface",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^network_interface.etjif6pm^"
+                ],
+                "scope": "g.8",
+                "value_indexes": [
+                    [
+                        31,
+                        63
+                    ]
+                ],
+                "values": [
+                    "aws_network_interface.spotnic.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        160,
+                        160
+                    ]
+                ],
+                "name": "associate_with_private_ip",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^associate_with_private_ip.64he2r7p^"
+                ],
+                "scope": "g.8",
+                "value_indexes": [
+                    [
+                        31,
+                        45
+                    ]
+                ],
+                "values": [
+                    "\"10.128.10.10\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        161,
+                        161
+                    ]
+                ],
+                "name": "depends_on",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^depends_on.cdin4n9u^"
+                ],
+                "scope": "g.8",
+                "value_indexes": [
+                    [
+                        31,
+                        60
+                    ]
+                ],
+                "values": [
+                    "[aws_internet_gateway.spotgw]"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        163,
+                        165
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.ke3d77hr^"
+                ],
+                "scope": "g.8",
+                "value_indexes": [
+                    [
+                        10,
+                        38
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name = \"Spot IP\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        164,
+                        164
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.hirnj013^"
+                ],
+                "scope": "g.8",
+                "value_indexes": [
+                    [
+                        12,
+                        21
+                    ]
+                ],
+                "values": [
+                    "\"Spot IP\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        173,
+                        173
+                    ]
+                ],
+                "name": "ami",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^ami.i8e9hz5k^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        23,
+                        46
+                    ]
+                ],
+                "values": [
+                    "\"ami-01c592dda54e43c1a\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        174,
+                        174
+                    ]
+                ],
+                "name": "instance_type",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^instance_type.blq5av7x^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        23,
+                        34
+                    ]
+                ],
+                "values": [
+                    "\"t3.medium\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        175,
+                        175
+                    ]
+                ],
+                "name": "availability_zone",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^availability_zone.6hrgduxf^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        23,
+                        38
+                    ]
+                ],
+                "values": [
+                    "\"ca-central-1d\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        176,
+                        176
+                    ]
+                ],
+                "name": "key_name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^key_name.f5ili728^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        23,
+                        36
+                    ]
+                ],
+                "values": [
+                    "\"parselaptop\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        178,
+                        178
+                    ]
+                ],
+                "name": "spot_price",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^spot_price.bc8psp83^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        26,
+                        33
+                    ]
+                ],
+                "values": [
+                    "\"0.014\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        179,
+                        179
+                    ]
+                ],
+                "name": "spot_type",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^spot_type.fp78xrsa^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        26,
+                        36
+                    ]
+                ],
+                "values": [
+                    "\"one-time\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        180,
+                        180
+                    ]
+                ],
+                "name": "wait_for_fulfillment",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^wait_for_fulfillment.cisz7umi^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        26,
+                        32
+                    ]
+                ],
+                "values": [
+                    "\"true\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        182,
+                        186
+                    ]
+                ],
+                "name": "tags",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^tags.8rv91oya^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        10,
+                        104
+                    ]
+                ],
+                "values": [
+                    "{\r\n    Name        = \"TFserver\"\r\n    Terraform   = \"true\"\r\n    Environment = \"playground\"\r\n  }"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        183,
+                        183
+                    ]
+                ],
+                "name": "Name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Name.7i3s874n^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        19,
+                        29
+                    ]
+                ],
+                "values": [
+                    "\"TFserver\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        184,
+                        184
+                    ]
+                ],
+                "name": "Terraform",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Terraform.jn93a3ch^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        19,
+                        25
+                    ]
+                ],
+                "values": [
+                    "\"true\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        185,
+                        185
+                    ]
+                ],
+                "name": "Environment",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^Environment.h8aepfza^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        19,
+                        31
+                    ]
+                ],
+                "values": [
+                    "\"playground\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        189,
+                        189
+                    ]
+                ],
+                "name": "device_index",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^device_index.jfzsg7gy^"
+                ],
+                "scope": "g.9.0",
+                "value_indexes": [
+                    [
+                        28,
+                        29
+                    ]
+                ],
+                "values": [
+                    "0"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        190,
+                        190
+                    ]
+                ],
+                "name": "network_interface_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^network_interface_id.ghumdah5^"
+                ],
+                "scope": "g.9.0",
+                "value_indexes": [
+                    [
+                        28,
+                        60
+                    ]
+                ],
+                "values": [
+                    "aws_network_interface.spotnic.id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        193,
+                        193
+                    ]
+                ],
+                "name": "user_data",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^user_data.7u42klgb^"
+                ],
+                "scope": "g.9",
+                "value_indexes": [
+                    [
+                        15,
+                        880
+                    ]
+                ],
+                "values": [
+                    "<<-EOF\r\n                #! bin/bash\r\n                sudo apt update -y\r\n                sudo apt install git -y\r\n                sudo apt install snapd -y\r\n                sudo snap install core -y\r\n                sudo snap refresh core\r\n                sudo snap install --classic certbot\r\n                sudo ln -s /snap/bin/certbot /usr/bin/certbot \r\n                sudo certbot --apache -d spot.parser3.com\r\n                sudo apt install apache2 -y\r\n                sudo systemctl apache2 start\r\n                sudo bash -c 'echo \"<h2>deployed by Jay using Terraform</h2>\" >> /var/www/html/index.html'\r\n                sudo bash -c 'echo \"<h4>In ca-central-1d Subnet in Canada</h4>\" >> /var/www/html/index.html'\r\n                date >> /var/www/html/index.html\r\n                sudo echo \"alias ll='ls -alF'\" >> /home/admin/.bashrc\r\n                EOF"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        231,
+                        231
+                    ]
+                ],
+                "name": "value",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^value.78vlpbfb^"
+                ],
+                "scope": "g.10",
+                "value_indexes": [
+                    [
+                        11,
+                        37
+                    ]
+                ],
+                "values": [
+                    "aws_eip.publicip.public_ip"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        235,
+                        235
+                    ]
+                ],
+                "name": "value",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^value.92u4gmig^"
+                ],
+                "scope": "g.11",
+                "value_indexes": [
+                    [
+                        11,
+                        58
+                    ]
+                ],
+                "values": [
+                    "aws_spot_instance_request.spotserver.private_ip"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        239,
+                        239
+                    ]
+                ],
+                "name": "value",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^value.d97neb7b^"
+                ],
+                "scope": "g.12",
+                "value_indexes": [
+                    [
+                        11,
+                        58
+                    ]
+                ],
+                "values": [
+                    "aws_spot_instance_request.spotserver.public_dns"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        243,
+                        243
+                    ]
+                ],
+                "name": "value",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^value.1gx6pil5^"
+                ],
+                "scope": "g.13",
+                "value_indexes": [
+                    [
+                        11,
+                        64
+                    ]
+                ],
+                "values": [
+                    "aws_spot_instance_request.spotserver.spot_instance_id"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        248,
+                        248
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name.e3at2eak^"
+                ],
+                "scope": "g.14",
+                "value_indexes": [
+                    [
+                        18,
+                        32
+                    ]
+                ],
+                "values": [
+                    "\"parser3.com.\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        249,
+                        249
+                    ]
+                ],
+                "name": "private_zone",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^private_zone.g3rmxxvc^"
+                ],
+                "scope": "g.14",
+                "value_indexes": [
+                    [
+                        18,
+                        23
+                    ]
+                ],
+                "values": [
+                    "false"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        252,
+                        252
+                    ]
+                ],
+                "name": "zone_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^zone_id.4dx693mv^"
+                ],
+                "scope": "g.15",
+                "value_indexes": [
+                    [
+                        13,
+                        56
+                    ]
+                ],
+                "values": [
+                    "\"${data.aws_route53_zone.selected.zone_id}\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        253,
+                        253
+                    ]
+                ],
+                "name": "name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^name.2vt6l6sg^"
+                ],
+                "scope": "g.15",
+                "value_indexes": [
+                    [
+                        13,
+                        58
+                    ]
+                ],
+                "values": [
+                    "\"spot.${data.aws_route53_zone.selected.name}\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        254,
+                        254
+                    ]
+                ],
+                "name": "type",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^type.7s1w19mz^"
+                ],
+                "scope": "g.15",
+                "value_indexes": [
+                    [
+                        13,
+                        16
+                    ]
+                ],
+                "values": [
+                    "\"A\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        255,
+                        255
+                    ]
+                ],
+                "name": "ttl",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^ttl.4vsalrol^"
+                ],
+                "scope": "g.15",
+                "value_indexes": [
+                    [
+                        13,
+                        17
+                    ]
+                ],
+                "values": [
+                    "\"60\""
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        256,
+                        256
+                    ]
+                ],
+                "name": "records",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^records.a720i5b4^"
+                ],
+                "scope": "g.15",
+                "value_indexes": [
+                    [
+                        13,
+                        43
+                    ]
+                ],
+                "values": [
+                    "[ aws_eip.publicip.public_ip ]"
+                ]
+            }
+        ]
+    },
+    "file": "# Jay Fallah, Parsedata Jan 2022\r\n# Creating a Development to have a playground programmatically in chosen cloud\r\n# 1. Create VPC\r\n# 2. Create an Internet Gateway\r\n# 3. Create a Custom Route Table\r\n# 4. Create a Subnet\r\n# 5. Associate this Subnet with the Route Table\r\n# 6. Create a Security Group to allow SSH, HTTP, HTTPS on ports 22, 80 and 443\r\n# 7. Create a Network Interface with ip in the Subnet\r\n# 8. Associate an Elasic IP to the Network\r\n# 9. Create a Debian Server EC2 Spot Instance and install basic programs\r\n# 10. Add Route 53 DNS record to access the spot server\r\n# Paramaterize all the above steps and test to see if it works as specified\r\n\r\nprovider \"aws\" {\r\n  region     = ^region.hthn9jww^\r\n  access_key = ^access_key.2r15cm4q^\r\n  secret_key = ^secret_key.6rub1974^\r\n  default_tags {\r\n    tags = ^tags.8bfls0tf^\n\n\n\r\n\r\n  }\r\n}\r\n\r\n# 1. Creates VPC in the specified cloud (AWS)\r\nresource \"aws_vpc\" \"spotvpc\" {\r\n  cidr_block           = ^cidr_block.hw3jwciv^\r\n  enable_dns_hostnames = ^enable_dns_hostnames.j14sleqa^\r\n  enable_dns_support   = ^enable_dns_support.ew5p3a6f^\r\n\r\n  tags = ^tags.eokxqnf2^\n\n\n\r\n\r\n}\r\n\r\n# 2. Creates an Internet Gateway for the VPC in the AWS \"spotvpc\"\r\nresource \"aws_internet_gateway\" \"spotgw\" {\r\n  vpc_id = ^vpc_id.8nxq9b3f^\r\n\r\n  tags = ^tags.1lxxctrm^\n\n\n\r\n\r\n}\r\n\r\n# 3. Creates a Custom Route Table for the Network\r\nresource \"aws_route_table\" \"spotroutetable\" {\r\n  vpc_id = ^vpc_id.irzp5l9a^\r\n\r\n  route {\r\n    cidr_block = ^cidr_block.j1m2m7w9^\r\n    gateway_id = ^gateway_id.be6bsmfq^\r\n  }\r\n\r\n  tags = ^tags.f95dex0p^\n\n\n\r\n\r\n}\r\n\r\n# 4. Creates a Subnet in the Network\r\nresource \"aws_subnet\" \"uno\" {\r\n  vpc_id            = ^vpc_id.1wxwk22k^\r\n  cidr_block        = ^cidr_block.6n8f8rnn^\r\n  availability_zone = ^availability_zone.8jw01cze^\r\n\r\n  tags = ^tags.ci1glvz^\n\n\n\r\n\r\n}\r\n\r\n# 5. Associates Uno Subnet with Spot Route Table\r\nresource \"aws_route_table_association\" \"subnet-association\" {\r\n  subnet_id      = ^subnet_id.8x1j5pvy^\r\n  route_table_id = ^route_table_id.ivaej7vk^\r\n}\r\n\r\n# 6. Creates a Security Group for testing with open ports on 22, 80 and 443\r\nresource \"aws_security_group\" \"spotsg\" {\r\n  name        = ^name.6ky3agee^\r\n  description = ^description.2j74u7l^\r\n  vpc_id      = ^vpc_id.iej0n5hs^\r\n\r\n  ingress {\r\n    cidr_blocks = ^cidr_blocks.d42mv7pj^\n\n\n\r\n\r\n    description = ^description.3vbvod0m^\r\n    from_port   = ^from_port.7j27y4de^\r\n    to_port     = ^to_port.gp8gyau3^\r\n    protocol    = ^protocol.ikkic71^\r\n  }\r\n\r\n  ingress {\r\n    cidr_blocks = ^cidr_blocks.bt8hsdi1^\n\n\n\r\n\r\n    description = ^description.730aieb0^\r\n    from_port   = ^from_port.7p6f5wpa^\r\n    to_port     = ^to_port.7a48rjmh^\r\n    protocol    = ^protocol.kcadb4pn^\r\n  }\r\n\r\n  ingress {\r\n    cidr_blocks = ^cidr_blocks.birj2ll8^\n\n\n\r\n\r\n    description = ^description.h6qow10x^\r\n    from_port   = ^from_port.eddtukzy^\r\n    to_port     = ^to_port.blpljdzi^\r\n    protocol    = ^protocol.6yb16cv4^\r\n  }\r\n\r\n  egress {\r\n    from_port   = ^from_port.h12klq5e^\r\n    to_port     = ^to_port.286z72x5^\r\n    protocol    = ^protocol.jd26b139^\r\n    cidr_blocks = ^cidr_blocks.f1fmciu1^\r\n  }\r\n\r\n  tags = ^tags.5oy11s22^\n\n\n\r\n\r\n}\r\n\r\n# 7. Creates a Network Interface for Spot VPC\r\nresource \"aws_network_interface\" \"spotnic\" {\r\n  subnet_id       = ^subnet_id.cgy6cuq0^\r\n  private_ips     = ^private_ips.40q2aeou^\r\n  security_groups = ^security_groups.hxqjxpjx^\r\n\r\n  tags = ^tags.3pevo2is^\n\n\n\r\n\r\n}\r\n\r\n# 8. Associates an Elastic IP to the Network\r\nresource \"aws_eip\" \"publicip\" {\r\n  vpc                       = ^vpc.1ejpolrb^\r\n  network_interface         = ^network_interface.etjif6pm^\r\n  associate_with_private_ip = ^associate_with_private_ip.64he2r7p^\r\n  depends_on                = ^depends_on.cdin4n9u^\r\n\r\n  tags = ^tags.ke3d77hr^\n\n\n\r\n\r\n}\r\n\r\n\r\n# 9. Creates a Debian EC2 on Spot and associates a key for ssh logging\r\nresource \"aws_spot_instance_request\" \"spotserver\" {\r\n  ami               = ^ami.i8e9hz5k^\r\n  instance_type     = ^instance_type.blq5av7x^\r\n  availability_zone = ^availability_zone.6hrgduxf^\r\n  key_name          = ^key_name.f5ili728^\r\n\r\n  spot_price           = ^spot_price.bc8psp83^\r\n  spot_type            = ^spot_type.fp78xrsa^\r\n  wait_for_fulfillment = ^wait_for_fulfillment.cisz7umi^\r\n\r\n  tags = ^tags.8rv91oya^\n\n\n\n\n\r\n  network_interface {\r\n    device_index         = ^device_index.jfzsg7gy^\r\n    network_interface_id = ^network_interface_id.ghumdah5^\r\n  }\r\n\r\n  user_data = ^user_data.7u42klgb^\n                #! bin/bash\r\n                sudo apt update -y\r\n                sudo apt install git -y\r\n                sudo apt install snapd -y\r\n                sudo snap install core -y\r\n                sudo snap refresh core\r\n                sudo snap install --classic certbot\r\n                sudo ln -s /snap/bin/certbot /usr/bin/certbot \r\n                sudo certbot --apache -d spot.parser3.com\r\n                sudo apt install apache2 -y\r\n                sudo systemctl apache2 start\r\n                sudo bash -c 'echo \"<h2>deployed by Jay using Terraform</h2>\" >> /var/www/html/index.html'\r\n                sudo bash -c 'echo \"<h4>In ca-central-1d Subnet in Canada</h4>\" >> /var/www/html/index.html'\r\n                date >> /var/www/html/index.html\r\n                sudo echo \"alias ll='ls -alF'\" >> /home/admin/.bashrc\r\n                EOF\r\n                #! bin/bash\r\n                sudo apt update -y\r\n                sudo apt install git -y\r\n                sudo apt install snapd -y\r\n                sudo snap install core -y\r\n                sudo snap refresh core\r\n                sudo snap install --classic certbot\r\n                sudo ln -s /snap/bin/certbot /usr/bin/certbot \r\n                sudo certbot --apache -d spot.parser3.com\r\n                sudo apt install apache2 -y\r\n                sudo systemctl apache2 start\r\n                sudo bash -c 'echo \"<h2>deployed by Jay using Terraform</h2>\" >> /var/www/html/index.html'\r\n                sudo bash -c 'echo \"<h4>In ca-central-1d Subnet in Canada</h4>\" >> /var/www/html/index.html'\r\n                date >> /var/www/html/index.html\r\n                sudo echo \"alias ll='ls -alF'\" >> /home/admin/.bashrc\r\n                EOF\r\n\r\n}\r\n\r\n# Output parameters for the spot server\r\noutput \"spotip\" {\r\n  value = ^value.78vlpbfb^\r\n}\r\n\r\noutput \"spotprivateip\" {\r\n  value = ^value.92u4gmig^\r\n}\r\n\r\noutput \"publicdns\" {\r\n  value = ^value.d97neb7b^\r\n}\r\n\r\noutput \"spotid\" {\r\n  value = ^value.1gx6pil5^\r\n}\r\n\r\n# 10. Adds spot server that is created above to the correct zone from Route53 as spot.parser3.com\r\ndata \"aws_route53_zone\" \"selected\" {\r\n  name         = ^name.e3at2eak^\r\n  private_zone = ^private_zone.g3rmxxvc^\r\n}\r\nresource \"aws_route53_record\" \"spot\" {\r\n  zone_id = ^zone_id.4dx693mv^\r\n  name    = ^name.2vt6l6sg^\r\n  type    = ^type.7s1w19mz^\r\n  ttl     = ^ttl.4vsalrol^\r\n  records = ^records.a720i5b4^\r\n}",
+    "modified": "2022-09-09T18:47:08.331128",
+    "size": 6593,
+    "tags": [
+        "price:0",
+        "OS:Windows"
+    ]
+}
