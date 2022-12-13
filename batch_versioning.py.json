@@ -1,24 +1,275 @@
 {
     "author": "linb.net@gmail.com",
-    "description": null,
-    "file": "# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.\r\n# SPDX-License-Identifier: Apache-2.0\r\n\r\n\"\"\"\r\nPurpose\r\n\r\nDemonstrates how to manipulate Amazon S3 versioned objects in batches by creating jobs\r\nthat call AWS Lambda functions to perform processing. The demo has three phases: setup,\r\nprocessing, and teardown.\r\n\"\"\"\r\n\r\nfrom contextlib import contextmanager\r\nfrom io import BytesIO\r\nimport json\r\nimport logging\r\nimport random\r\nfrom shutil import get_terminal_size\r\nfrom sys import stdout\r\nimport time\r\nfrom urllib import parse\r\nimport uuid\r\nfrom zipfile import ZipFile\r\n\r\nimport boto3\r\nfrom botocore.exceptions import ClientError\r\n\r\nimport versioning\r\n\r\nlogging.basicConfig(\r\n    format='%(levelname)s:%(message)s', level=logging.INFO, stream=stdout)\r\nlogger = logging.getLogger(__name__)\r\n\r\niam = boto3.resource('iam')\r\ns3 = boto3.resource('s3')\r\ns3control = boto3.client('s3control')\r\nsts = boto3.client('sts')\r\naws_lambda = boto3.client('lambda')\r\n\r\n\r\n@contextmanager\r\ndef header():\r\n    \"\"\"Prints a header wrapped in full-screen rules.\"\"\"\r\n    width = get_terminal_size((80, 20))[0]\r\n    print('-'*width)\r\n    yield\r\n    print('-'*width)\r\n\r\n\r\ndef custom_retry(callback, error_code, max_tries):\r\n    \"\"\"\r\n    Retries the callback function with an exponential backoff algorithm until\r\n    the callback succeeds, raises a different error than the expected error,\r\n    or exceeds the maximum number of tries.\r\n\r\n    :param callback: The function to call.\r\n    :param error_code: The expected error. When this error is raised, the callback is\r\n                       retried. Otherwise, the error is raised.\r\n    :param max_tries: The maximum number of times to try the callback function.\r\n    :return: The response from the callback function when the callback function\r\n             succeeds. Otherwise, None.\r\n    \"\"\"\r\n    sleepy_time = 1\r\n    tries = 1\r\n    response = None\r\n    while tries <= max_tries:\r\n        try:\r\n            response = callback()\r\n            logger.debug(\"Successfully ran on try %s.\", tries)\r\n            break\r\n        except ClientError as error:\r\n            if error.response['Error']['Code'] == error_code:\r\n                logger.debug(\"Got retryable error %s.\", error_code)\r\n                time.sleep(sleepy_time)\r\n                sleepy_time = min(sleepy_time*2, 32)\r\n                tries += 1\r\n                if tries == max_tries:\r\n                    logger.error(\"Call never succeeded after %s tries.\", tries)\r\n                    raise\r\n            else:\r\n                raise\r\n    return response\r\n\r\n\r\ndef create_iam_role(role_name):\r\n    \"\"\"\r\n    Creates an AWS Identity and Access Management (IAM) role and attached policy\r\n    that has the permissions needed by the Lambda functions used in this demo.\r\n\r\n    :param role_name: The name of the role.\r\n    :return: The created role object.\r\n    \"\"\"\r\n    policy_name = f'{role_name}-policy'\r\n\r\n    try:\r\n        # Defines the trust relationship that lets Lambda receive batch events.\r\n        lambda_and_s3_batch_assume_role_policy = {\r\n            \"Version\": \"2012-10-17\",\r\n            \"Statement\": [\r\n                {\r\n                    \"Effect\": \"Allow\",\r\n                    \"Principal\": {\r\n                        \"Service\": \"lambda.amazonaws.com\"\r\n                    },\r\n                    \"Action\": \"sts:AssumeRole\"\r\n                },\r\n                {\r\n                    \"Effect\": \"Allow\",\r\n                    \"Principal\": {\r\n                        \"Service\": \"batchoperations.s3.amazonaws.com\"\r\n                    },\r\n                    \"Action\": \"sts:AssumeRole\"\r\n                }\r\n            ]\r\n        }\r\n\r\n        role = iam.create_role(\r\n            RoleName=role_name,\r\n            AssumeRolePolicyDocument=json.dumps(lambda_and_s3_batch_assume_role_policy)\r\n        )\r\n        iam.meta.client.get_waiter('role_exists').wait(RoleName=role_name)\r\n        logger.info(\"Created role %s.\", role.name)\r\n    except ClientError:\r\n        logger.exception(\"Couldn't create role %s.\", role_name)\r\n        raise\r\n\r\n    try:\r\n        # The s3:ListBucket action is needed or Lambda functions receive AccessDenied\r\n        # instead of NoSuchKey when they call s3.Object.get() on objects\r\n        # that have been deleted.\r\n        s3_and_invoke_policy = {\r\n            \"Version\": \"2012-10-17\",\r\n            \"Statement\": [\r\n                {\r\n                    \"Sid\": \"AwsVersionDemoPolicy\",\r\n                    \"Effect\": \"Allow\",\r\n                    \"Action\": [\r\n                        \"s3:PutObject\",\r\n                        \"s3:GetObject\",\r\n                        \"s3:DeleteObjectVersion\",\r\n                        \"s3:ListBucketVersions\",\r\n                        \"s3:ListBucket\",\r\n                        \"s3:DeleteObject\",\r\n                        \"s3:GetObjectVersion\",\r\n                        \"lambda:InvokeFunction\"\r\n                    ],\r\n                    \"Resource\": \"*\"\r\n                }\r\n            ]\r\n        }\r\n\r\n        policy = iam.create_policy(\r\n            PolicyName=policy_name,\r\n            PolicyDocument=json.dumps(s3_and_invoke_policy)\r\n        )\r\n        iam.meta.client.get_waiter('policy_exists').wait(PolicyArn=policy.arn)\r\n        logger.info(\"Created policy %s with arn %s.\", policy_name, policy.arn)\r\n\r\n        role.attach_policy(PolicyArn=policy.arn)\r\n        time.sleep(1)\r\n        logger.info(\"Attached policy %s to role %s.\", policy_name, role.name)\r\n    except ClientError:\r\n        logger.exception(\"Couldn't create or attach policy %s.\", policy_name)\r\n        raise\r\n\r\n    return role\r\n\r\n\r\ndef create_lambda_function(iam_role, function_name, function_file_name, handler,\r\n                           description):\r\n    \"\"\"\r\n    Creates a Lambda function.\r\n\r\n    :param iam_role: The IAM role associated with the function.\r\n    :param function_name: The name of the function.\r\n    :param function_file_name: The local file name that contains the function code.\r\n    :param handler: The fully qualified name of the handler function.\r\n    :param description: A friendly description of the function's purpose.\r\n    :return: The Amazon Resource Name (ARN) of the created function.\r\n    \"\"\"\r\n    buffer = BytesIO()\r\n    with ZipFile(buffer, 'w') as zipped:\r\n        zipped.write(function_file_name)\r\n    buffer.seek(0)\r\n    zip_contents = buffer.read()\r\n\r\n    try:\r\n        print(f\"Creating Lambda function {function_name}...\")\r\n        response = custom_retry(\r\n            lambda: aws_lambda.create_function(\r\n                FunctionName=function_name,\r\n                Runtime='python3.8',\r\n                Role=iam_role.arn,\r\n                Handler=handler,\r\n                Code={\r\n                    'ZipFile': zip_contents,\r\n                },\r\n                Description=description,\r\n                Publish=True\r\n            ), 'InvalidParameterValueException', 5)\r\n        function_arn = response['FunctionArn']\r\n        logger.info(\"Created function '%s' with ARN: '%s'.\",\r\n                    function_name, response['FunctionArn'])\r\n    except ClientError:\r\n        logger.exception(\"Couldn't create function %s.\", function_name)\r\n        raise\r\n\r\n    return function_arn\r\n\r\n\r\ndef create_and_fill_bucket(file_name, bucket_name, obj_prefix):\r\n    \"\"\"\r\n    Creates a version-enabled bucket and fills it with initial stanza objects.\r\n\r\n    :param file_name: The file that contains the poem to upload.\r\n    :param bucket_name: The name of the bucket to create.\r\n    :param obj_prefix: The prefix to assign to the uploaded stanzas.\r\n    :return: The created bucket and stanza objects.\r\n    \"\"\"\r\n    with open(file_name) as file:\r\n        stanzas = file.read().split('\\n\\n')\r\n\r\n    bucket = versioning.create_versioned_bucket(bucket_name, obj_prefix)\r\n\r\n    try:\r\n        # Fill the bucket with initial stanza objects.\r\n        stanza_objects = []\r\n        for index, stanza in enumerate(stanzas):\r\n            obj = bucket.Object(f\"{obj_prefix}stanza-{index}\")\r\n            obj.put(Body=bytes(stanza, 'utf-8'))\r\n            stanza_objects.append(obj)\r\n        print(f\"Added {len(stanza_objects)} stanzas as objects to {bucket.name}.\")\r\n    except ClientError:\r\n        logger.exception(\"Couldn't put initial stanza objects into bucket %s.\",\r\n                         bucket.name)\r\n        raise\r\n\r\n    return bucket, stanza_objects\r\n\r\n\r\ndef prepare_for_random_revisions(bucket, stanza_objects):\r\n    \"\"\"\r\n    Makes a manifest to do a series of revisions as a batch.\r\n\r\n    The manifest contains randomly picked revision types that are each packed\r\n    with an object key as a pipe-delimited string.\r\n\r\n    :param bucket: The bucket that contains the stanzas.\r\n    :param stanza_objects: The stanza objects.\r\n    :return: The manifest as a list of lines in CSV format.\r\n    \"\"\"\r\n    revisions = ['lower', 'upper', 'reverse', 'delete']\r\n    manifest_lines = []\r\n    for _ in range(5):\r\n        for stanza_obj in stanza_objects:\r\n            revision = parse.quote(\r\n                f\"{stanza_obj.key}|{revisions[random.randrange(0, len(revisions))]}\")\r\n            manifest_lines.append(f\"{bucket.name},{revision}\")\r\n    return manifest_lines\r\n\r\n\r\ndef prepare_for_revival(bucket, obj_prefix):\r\n    \"\"\"\r\n    Makes a manifest for reviving any deleted objects in the bucket. A deleted\r\n    object is one that has a delete marker as its latest version.\r\n\r\n    :param bucket: The bucket that contains the stanzas.\r\n    :param obj_prefix: The prefix of the uploaded stanzas.\r\n    :return: The manifest as a list of lines in CSV format.\r\n    \"\"\"\r\n    try:\r\n        response = s3.meta.client.list_object_versions(\r\n            Bucket=bucket.name, Prefix=f'{obj_prefix}stanza')\r\n        manifest_lines = [\r\n            f\"{bucket.name},{parse.quote(marker['Key'])},{marker['VersionId']}\"\r\n            for marker in response['DeleteMarkers']\r\n            if marker['IsLatest']\r\n        ]\r\n    except ClientError:\r\n        logger.exception(\"Couldn't get object versions from %s.\", bucket.name)\r\n        raise\r\n    return manifest_lines\r\n\r\n\r\ndef prepare_for_cleanup(bucket, obj_prefix, stanza_objects):\r\n    \"\"\"\r\n    Makes a manifest for cleaning up all delete markers in the bucket. In practice,\r\n    a large number of delete markers can slow down bucket performance so cleaning\r\n    them up is a best practice.\r\n\r\n    This function first creates a bunch of delete markers interspersed with\r\n    non-delete marker versions by deleting and putting objects in a loop.\r\n\r\n    :param bucket: The bucket that contains the stanzas.\r\n    :param obj_prefix: The prefix of the uploaded stanzas.\r\n    :param stanza_objects: The stanza objects.\r\n    :return: The manifest as a list of lines in CSV format.\r\n    \"\"\"\r\n    try:\r\n        for stanza in stanza_objects:\r\n            body = stanza.get()['Body'].read()\r\n            for index in range(1, 7):\r\n                if index & 0x1:\r\n                    stanza.delete()\r\n                else:\r\n                    stanza.put(Body=body)\r\n    except ClientError:\r\n        logger.exception(\"Preparation for cleanup phase failed.\")\r\n        raise\r\n\r\n    try:\r\n        response = s3.meta.client.list_object_versions(\r\n            Bucket=bucket.name, Prefix=f'{obj_prefix}stanza')\r\n\r\n        version_count = len(response['Versions']) + len(response['DeleteMarkers'])\r\n        print(f\"Created a mess of delete markers. There are currently {version_count} \"\r\n              f\"versions in {bucket.name}.\")\r\n\r\n        manifest_lines = [\r\n            f\"{bucket.name},{parse.quote(marker['Key'])},{marker['VersionId']}\"\r\n            for marker in response['DeleteMarkers']\r\n        ]\r\n    except ClientError:\r\n        logger.exception(\"Couldn't get object versions from %s.\", bucket.name)\r\n        raise\r\n    else:\r\n        return manifest_lines\r\n\r\n\r\ndef create_batch_job(job, manifest):\r\n    \"\"\"\r\n    Creates an Amazon S3 batch job. The manifest is uploaded to the S3\r\n    bucket and the job is created. Then Amazon S3 processes the job asynchronously.\r\n    Jobs can be queried or canceled by using the returned job ID.\r\n\r\n    :param job: The information about the job to create.\r\n    :param manifest: The manifest that defines the objects affected by the job.\r\n    :return: The ID of the created job.\r\n    \"\"\"\r\n    manifest_obj = manifest['bucket'].Object(manifest['key'])\r\n    manifest_e_tag = None\r\n    try:\r\n        # Upload the manifest so the batch system can find it.\r\n        response = manifest_obj.put(Body=bytes('\\n'.join(manifest['lines']), 'utf-8'))\r\n        if 'ETag' in response:\r\n            manifest_e_tag = response['ETag']\r\n        logger.info(\"Uploaded job manifest %s to bucket %s.\",\r\n                    manifest_obj.key, manifest['bucket'].name)\r\n    except ClientError:\r\n        logger.exception(\"Couldn't upload job manifest %s to bucket %s.\",\r\n                         manifest_obj.key, manifest['bucket'].name)\r\n        raise\r\n\r\n    manifest_fields = ['Bucket', 'Key']\r\n    if manifest['has_versions']:\r\n        manifest_fields.append('VersionId')\r\n    try:\r\n        response = s3control.create_job(\r\n            AccountId=job['account_id'],\r\n            ConfirmationRequired=False,\r\n            Description=job['description'],\r\n            Priority=1,\r\n            RoleArn=job['role_arn'],\r\n            Operation={\r\n                'LambdaInvoke': {\r\n                    'FunctionArn': job['function_arn']\r\n                }\r\n            },\r\n            Manifest={\r\n                'Spec': {\r\n                    'Format': 'S3BatchOperations_CSV_20180820',\r\n                    'Fields': manifest_fields\r\n                },\r\n                'Location': {\r\n                    'ObjectArn':\r\n                        f\"arn:aws:s3:::{manifest['bucket'].name}/{manifest['key']}\",\r\n                    'ETag': manifest_e_tag if manifest_e_tag else manifest_obj.e_tag\r\n                }\r\n            },\r\n            Report={\r\n                'Bucket': f\"arn:aws:s3:::{manifest['bucket'].name}\",\r\n                'Format': 'Report_CSV_20180820',\r\n                'Enabled': True,\r\n                'Prefix': manifest['obj_prefix'],\r\n                'ReportScope': 'AllTasks'\r\n            }\r\n        )\r\n        logger.info(\"Created job %s.\", response['JobId'])\r\n    except ClientError:\r\n        logger.exception(\"Couldn't create job to run function %s on manifest %s.\",\r\n                         job['function_arn'], manifest_obj.key)\r\n        raise\r\n\r\n    return response['JobId']\r\n\r\n\r\ndef report_job_status(account_id, job_id):\r\n    \"\"\"\r\n    Polls the specified job every second and reports the current status until\r\n    the job completes.\r\n\r\n    :param account_id: The ID of the account that owns the job.\r\n    :param job_id: The ID of the job.\r\n    \"\"\"\r\n    try:\r\n        # Get job status until the job is complete, failed, or canceled.\r\n        job_status = None\r\n        print(f\"Status of job {job_id}:\")\r\n        while job_status not in ('Complete', 'Failed', 'Cancelled'):\r\n            prev_job_status = job_status\r\n            job_status = s3control.describe_job(\r\n                AccountId=account_id, JobId=job_id)['Job']['Status']\r\n            if prev_job_status != job_status:\r\n                print(job_status, end='')\r\n            else:\r\n                print('.', end='')\r\n            stdout.flush()\r\n            time.sleep(1)\r\n        print('')\r\n    except ClientError:\r\n        logger.exception(\"Couldn't get status for job %s.\", job_id)\r\n        raise\r\n\r\n\r\ndef setup_demo(role_name, bucket_name, function_info, obj_prefix):\r\n    \"\"\"\r\n    Sets up the demo. Creates the IAM role, Lambda functions, and S3 bucket\r\n    that the demo uses.\r\n\r\n    This function also has the side effect of filling the function_info\r\n    dictionary with the Amazon Resource Names (ARNs) of the created functions.\r\n\r\n    :param role_name: The name to give the IAM role.\r\n    :param bucket_name: The name to give the S3 bucket.\r\n    :param function_info: Information about the Lambda functions.\r\n    :param obj_prefix: The prefix to assign to created resources.\r\n    :return: The created role, bucket, and stanza objects.\r\n    \"\"\"\r\n    with header():\r\n        print(\"Setup phase!\")\r\n\r\n    print(\"Creating an IAM role for the Lambda function...\")\r\n    role = create_iam_role(role_name)\r\n\r\n    print(\"Creating Lambda functions to handle batch operations...\")\r\n    for function_name in function_info.keys():\r\n        info = function_info[function_name]\r\n        info['arn'] = create_lambda_function(\r\n            role, function_name, info['file_name'], info['handler'],\r\n            info['description'])\r\n\r\n    print(\"Creating a version-enabled bucket and filling it with initial stanzas...\")\r\n    bucket, stanza_objects = create_and_fill_bucket(\r\n        'father_william.txt', bucket_name, obj_prefix)\r\n\r\n    return role, bucket, stanza_objects\r\n\r\n\r\ndef usage_demo_batch_operations(\r\n        role_arn, function_info, bucket, stanza_objects, obj_prefix):\r\n    \"\"\"\r\n    Performs the main processing part of the usage demonstration.\r\n\r\n    :param role_arn: The ARN of the role that the created jobs use.\r\n    :param function_info: Information about the Lambda functions used in the demo.\r\n    :param bucket: The bucket that contains all of the objects created by the demo.\r\n    :param stanza_objects: The initial set of stanza objects created during setup.\r\n    :param obj_prefix: The prefix to assign to resources and objects.\r\n    \"\"\"\r\n    with header():\r\n        print(\"Main processing phase!\")\r\n\r\n    account_id = sts.get_caller_identity()['Account']\r\n    job = {'account_id': account_id, 'role_arn': role_arn}\r\n    manifest = {'bucket': bucket, 'obj_prefix': obj_prefix, 'has_versions': False}\r\n\r\n    with header():\r\n        print(\"Creating a batch job to perform a series of random revisions on \"\r\n              \"each stanza...\")\r\n    revision_manifest = prepare_for_random_revisions(bucket, stanza_objects)\r\n    job['description'] = \"Perform a series of random revisions to each stanza.\"\r\n    job['function_arn'] = function_info['revise_stanza']['arn']\r\n    manifest['key'] = f\"{obj_prefix}revision-manifest.csv\"\r\n    manifest['lines'] = revision_manifest\r\n    job_id = create_batch_job(job, manifest)\r\n    report_job_status(account_id, job_id)\r\n\r\n    try:\r\n        print(\"The poetic product, after revisions:\")\r\n        stanza_objs = bucket.objects.filter(Prefix=f'{obj_prefix}stanza')\r\n        stanza_count = len(list(stanza_objs))\r\n        if stanza_count == 0:\r\n            print(\"We deleted all of our stanzas!\")\r\n        else:\r\n            print(f\"Our poem is now only {stanza_count} stanzas.\")\r\n            for stanza_obj in stanza_objs:\r\n                print(stanza_obj.get()['Body'].read().decode('utf-8'))\r\n    except ClientError:\r\n        logger.exception(\"Couldn't get stanzas from bucket %s.\", bucket.name)\r\n        raise\r\n\r\n    # Revive deleted stanzas.\r\n    with header():\r\n        print(\"Creating a batch job to revive any stanzas that were deleted as part of \"\r\n              \"the random revisions...\")\r\n    revival_manifest = prepare_for_revival(bucket, obj_prefix)\r\n    job['description'] = \"Remove delete markers.\"\r\n    job['function_arn'] = function_info['remove_delete_marker']['arn']\r\n    manifest['key'] = f\"{obj_prefix}revival-manifest.csv\"\r\n    manifest['lines'] = revival_manifest\r\n    manifest['has_versions'] = True\r\n    job_id = create_batch_job(job, manifest)\r\n    report_job_status(account_id, job_id)\r\n\r\n    try:\r\n        stanza_count = len(list(bucket.objects.filter(Prefix=f'{obj_prefix}stanza')))\r\n        print(f\"There are now {stanza_count} stanzas in {bucket.name}.\")\r\n    except ClientError:\r\n        logger.exception(\"Couldn't get stanzas from bucket %s.\", bucket.name)\r\n        raise\r\n\r\n    # Clean up all the delete markers.\r\n    with header():\r\n        print(\"Creating a batch job to clean up excess delete markers sprinkled \"\r\n              \"throughout the bucket...\")\r\n    cleanup_manifest = prepare_for_cleanup(bucket, obj_prefix, stanza_objects)\r\n    job['description'] = \"Clean up all delete markers.\"\r\n    job['function_arn'] = function_info['remove_delete_marker']['arn']\r\n    manifest['key'] = f\"{obj_prefix}cleanup-manifest.csv\"\r\n    manifest['lines'] = cleanup_manifest\r\n    job_id = create_batch_job(job, manifest)\r\n    report_job_status(account_id, job_id)\r\n\r\n    try:\r\n        version_count = len(list(bucket.object_versions.filter(\r\n            Prefix=f'{obj_prefix}stanza')))\r\n        print(f\"After cleanup, there are now {version_count} versions \"\r\n              f\"in {bucket.name}.\")\r\n    except ClientError:\r\n        logger.exception(\"Couldn't get stanzas from bucket %s.\", bucket.name)\r\n        raise\r\n\r\n\r\ndef teardown_demo(role_name, function_info, bucket_name):\r\n    \"\"\"\r\n    Tears down the demo. Deletes everything the demo created and returns the\r\n    AWS account to its initial state. This is a good-faith effort. You should\r\n    verify that all resources are deleted.\r\n\r\n    :param role_name: The name of the IAM role to delete.\r\n    :param function_info: Information about the Lambda functions to delete.\r\n    :param bucket_name: The name of the bucket to delete. All objects in this bucket\r\n                        are also deleted.\r\n    \"\"\"\r\n    with header():\r\n        print(\"Teardown phase!\")\r\n\r\n    print(\"\\nDetaching policies and deleting the IAM role...\")\r\n    role = iam.Role(role_name)\r\n    try:\r\n        for policy in role.attached_policies.all():\r\n            policy_name = policy.policy_name\r\n            role.detach_policy(PolicyArn=policy.arn)\r\n            policy.delete()\r\n            logger.info(\"Detached and deleted policy %s.\", policy_name)\r\n        role.delete()\r\n        logger.info(\"Deleted role %s.\", role_name)\r\n    except ClientError as error:\r\n        logger.warning(\"Couldn't delete role %s because %s.\", role_name, error)\r\n\r\n    print(\"\\nDeleting Lambda functions...\")\r\n    for function_name in function_info.keys():\r\n        try:\r\n            aws_lambda.delete_function(FunctionName=function_name)\r\n            logger.info(\"Deleted Lambda function %s.\", function_name)\r\n        except ClientError as error:\r\n            logger.warning(\r\n                \"Couldn't delete Lambda function %s because %s\", function_name, error)\r\n\r\n    print(\"\\nEmptying and deleting the bucket...\")\r\n    bucket = s3.Bucket(bucket_name)\r\n    try:\r\n        bucket.object_versions.delete()\r\n        print(f\"Permanently deleted everything in {bucket.name}.\")\r\n    except ClientError as error:\r\n        logger.warning(\"Couldn't empty bucket %s because %s.\", bucket.name, error)\r\n\r\n    try:\r\n        bucket.delete()\r\n        print(f\"Deleted bucket {bucket.name}.\")\r\n    except ClientError as error:\r\n        logger.warning(\"Couldn't delete bucket %s because %s.\", bucket.name, error)\r\n\r\n\r\ndef main():\r\n    \"\"\"\r\n    Kicks off the demo.\r\n    \"\"\"\r\n    prefix = 'demo-versioning'\r\n    obj_prefix = f'{prefix}/'\r\n    bucket_name = f'{prefix}-bucket-{uuid.uuid1()}'\r\n    role_name = f'{prefix}-s3-batch-role-{time.time_ns()}'\r\n    function_info = {\r\n        'revise_stanza': {\r\n            'file_name': 'revise_stanza.py',\r\n            'handler': 'revise_stanza.lambda_handler',\r\n            'description': 'Applies a revision to a stanza.',\r\n            'arn': None},\r\n        'remove_delete_marker': {\r\n            'file_name': 'remove_delete_marker.py',\r\n            'handler': 'remove_delete_marker.lambda_handler',\r\n            'description': 'Removes a delete marker from an object.',\r\n            'arn': None}\r\n    }\r\n\r\n    with header():\r\n        print(\"Welcome to the usage demonstration of Amazon S3 batch versioning.\\n\")\r\n        print(\"This demonstration manipulates Amazon S3 objects in batches \"\r\n              \"by creating jobs that call AWS Lambda functions to perform processing. \"\r\n              \"It uses the stanzas from the poem 'You Are Old, Father William' \"\r\n              \"by Lewis Carroll, treating each stanza as a separate object.\")\r\n\r\n    print(\"Let's do the demo.\")\r\n    role, bucket, stanza_objects = \\\r\n        setup_demo(role_name, bucket_name, function_info, obj_prefix)\r\n\r\n    usage_demo_batch_operations(\r\n        role.arn, function_info, bucket, stanza_objects, obj_prefix)\r\n\r\n    teardown_demo(role_name, function_info, bucket_name)\r\n    with header():\r\n        print(\"Demo done!\")\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "compile_args": "",
+    "compile_ver": "",
+    "description": "",
+    "design_parameters": {
+        "block_count": 0,
+        "blocks": [],
+        "input_file": "demo scripts/aws_create_app-a_dns.py",
+        "lang": "python",
+        "parse_time": "0:00:00.702686",
+        "scopes": {
+            "g": {
+                "declarations": {},
+                "end": 614,
+                "index": 4,
+                "line": [
+                    9,
+                    26
+                ],
+                "name": "global",
+                "start": 188,
+                "type": "file_input"
+            },
+            "g.0": {
+                "end": 396,
+                "index": 0,
+                "line": [
+                    12,
+                    16
+                ],
+                "name": "global.boto3",
+                "scope": "g",
+                "start": 230,
+                "type": "Atom_exprContext"
+            },
+            "g.1": {
+                "end": 426,
+                "index": 0,
+                "line": [
+                    17,
+                    17
+                ],
+                "name": "global.session",
+                "scope": "g",
+                "start": 403,
+                "type": "Atom_exprContext"
+            },
+            "g.2": {
+                "end": 468,
+                "index": 0,
+                "line": [
+                    18,
+                    18
+                ],
+                "name": "global.session",
+                "scope": "g",
+                "start": 443,
+                "type": "Atom_exprContext"
+            },
+            "g.3": {
+                "end": 613,
+                "index": 0,
+                "line": [
+                    20,
+                    25
+                ],
+                "name": "global.aws_utils",
+                "scope": "g",
+                "start": 470,
+                "type": "Atom_exprContext"
+            }
+        },
+        "script": "",
+        "type": "script",
+        "variable_count": 8,
+        "variables": [
+            {
+                "line_numbers": [
+                    [
+                        12,
+                        16
+                    ]
+                ],
+                "name": "session",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^session.dr9msrpb^"
+                ],
+                "scope": "g",
+                "value_indexes": [
+                    [
+                        11,
+                        177
+                    ]
+                ],
+                "values": [
+                    "boto3.session.Session(\n    aws_access_key_id='KeyHere1234KeyThere4321',\n    aws_secret_access_key='SecretKeyHere1234SecretKeyThere4321',\n    region_name='us-east-2'\n)"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        13,
+                        13
+                    ]
+                ],
+                "name": "aws_access_key_id",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^aws_access_key_id.33u2qs2k^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        23,
+                        48
+                    ]
+                ],
+                "values": [
+                    "'KeyHere1234KeyThere4321'"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        14,
+                        14
+                    ]
+                ],
+                "name": "aws_secret_access_key",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^aws_secret_access_key.hn51riqu^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        27,
+                        64
+                    ]
+                ],
+                "values": [
+                    "'SecretKeyHere1234SecretKeyThere4321'"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        15,
+                        15
+                    ]
+                ],
+                "name": "region_name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^region_name.f3i3hyie^"
+                ],
+                "scope": "g.0",
+                "value_indexes": [
+                    [
+                        17,
+                        28
+                    ]
+                ],
+                "values": [
+                    "'us-east-2'"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        17,
+                        17
+                    ]
+                ],
+                "name": "ec2",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^ec2.9zisi03l^"
+                ],
+                "scope": "g",
+                "value_indexes": [
+                    [
+                        7,
+                        30
+                    ]
+                ],
+                "values": [
+                    "session.resource('ec2')"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        18,
+                        18
+                    ]
+                ],
+                "name": "route53client",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^route53client.giqge28y^"
+                ],
+                "scope": "g",
+                "value_indexes": [
+                    [
+                        17,
+                        42
+                    ]
+                ],
+                "values": [
+                    "session.client('route53')"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        23,
+                        23
+                    ]
+                ],
+                "name": "eip_name",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^eip_name.2jjer22c^"
+                ],
+                "scope": "g.3",
+                "value_indexes": [
+                    [
+                        16,
+                        37
+                    ]
+                ],
+                "values": [
+                    "'fpco-test-app-a-eip'"
+                ]
+            },
+            {
+                "line_numbers": [
+                    [
+                        24,
+                        24
+                    ]
+                ],
+                "name": "fqdn",
+                "ontology": "Unknown",
+                "replacement_names": [
+                    "^fqdn.ifa8x57j^"
+                ],
+                "scope": "g.3",
+                "value_indexes": [
+                    [
+                        12,
+                        47
+                    ]
+                ],
+                "values": [
+                    "'fpco-test-app-a.aws.arganteal.com'"
+                ]
+            }
+        ]
+    },
+    "file": "#\n# Create DNS record in AWS Route 53 for App A\n#\n# Prerequisites:\n#   - aws_create_app-a_elastic_ip.py\n#   - The containing DNS zone must already exist and be registered (or delegated)\n#\n\nimport boto3\nimport aws_utils\n\nsession = ^session.afzoiqvo^\n\n\n\n\nec2 = ^ec2.djqhm7z1^\nroute53client = ^route53client.8bjjbf2l^\n\naws_utils.create_dns_record(\n    ec2,\n    route53client,\n    eip_name = ^eip_name.k2i6f9z8^,\n    fqdn = ^fqdn.kibdmy7w^\n)\n",
     "lang": "python",
     "name": "batch_versioning.py",
     "owner": "linb.net@gmail.com",
-    "size": 24250,
+    "price": 0,
+    "size": 438,
     "tags": [
-        "Function:aws/s3",
-        "Function:aws/s3/control",
-        "Function:aws/sts",
-        "Platform:AWS",
-        "Function:aws/account",
-        "Function:aws",
-        "Function:aws/batch",
-        "Function:aws/event/bridge",
-        "Function:aws/event",
-        "Function:aws/iam",
-        "Function:aws/lambda"
+        "Platform:AWS"
     ],
-    "updated": "Tue, 13 Dec 2022 17:49:35 GMT",
+    "updated": "Sat, 10 Dec 2022 17:48:27 GMT",
     "wordcloud": 1
 }
