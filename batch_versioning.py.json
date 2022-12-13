@@ -1,18 +1,18 @@
 {
     "name": "batch_versioning.py.json",
     "path": "batch_versioning.py.json",
-    "sha": "66dc9051da651c15d98d017a88658263cab28f02",
-    "size": 9,
+    "sha": "272c9667917de041519e1754b935260526303e42",
+    "size": 995,
     "url": "https://api.github.com/repos/linb/AdvLink-Demo/contents/batch_versioning.py.json?ref=master",
     "html_url": "https://github.com/linb/AdvLink-Demo/blob/master/batch_versioning.py.json",
-    "git_url": "https://api.github.com/repos/linb/AdvLink-Demo/git/blobs/66dc9051da651c15d98d017a88658263cab28f02",
+    "git_url": "https://api.github.com/repos/linb/AdvLink-Demo/git/blobs/272c9667917de041519e1754b935260526303e42",
     "download_url": "https://raw.githubusercontent.com/linb/AdvLink-Demo/master/batch_versioning.py.json",
     "type": "file",
-    "content": "dW5kZWZpbmVk\n",
+    "content": "ewogICAgIm5hbWUiOiAiYmF0Y2hfdmVyc2lvbmluZy5weS5qc29uIiwKICAg\nICJwYXRoIjogImJhdGNoX3ZlcnNpb25pbmcucHkuanNvbiIsCiAgICAic2hh\nIjogIjY2ZGM5MDUxZGE2NTFjMTVkOThkMDE3YTg4NjU4MjYzY2FiMjhmMDIi\nLAogICAgInNpemUiOiA5LAogICAgInVybCI6ICJodHRwczovL2FwaS5naXRo\ndWIuY29tL3JlcG9zL2xpbmIvQWR2TGluay1EZW1vL2NvbnRlbnRzL2JhdGNo\nX3ZlcnNpb25pbmcucHkuanNvbj9yZWY9bWFzdGVyIiwKICAgICJodG1sX3Vy\nbCI6ICJodHRwczovL2dpdGh1Yi5jb20vbGluYi9BZHZMaW5rLURlbW8vYmxv\nYi9tYXN0ZXIvYmF0Y2hfdmVyc2lvbmluZy5weS5qc29uIiwKICAgICJnaXRf\ndXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvbGluYi9BZHZM\naW5rLURlbW8vZ2l0L2Jsb2JzLzY2ZGM5MDUxZGE2NTFjMTVkOThkMDE3YTg4\nNjU4MjYzY2FiMjhmMDIiLAogICAgImRvd25sb2FkX3VybCI6ICJodHRwczov\nL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vbGluYi9BZHZMaW5rLURlbW8v\nbWFzdGVyL2JhdGNoX3ZlcnNpb25pbmcucHkuanNvbiIsCiAgICAidHlwZSI6\nICJmaWxlIiwKICAgICJjb250ZW50IjogImRXNWtaV1pwYm1Wa1xuIiwKICAg\nICJlbmNvZGluZyI6ICJiYXNlNjQiLAogICAgIl9saW5rcyI6IHsKICAgICAg\nICAic2VsZiI6ICJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL2xpbmIv\nQWR2TGluay1EZW1vL2NvbnRlbnRzL2JhdGNoX3ZlcnNpb25pbmcucHkuanNv\nbj9yZWY9bWFzdGVyIiwKICAgICAgICAiZ2l0IjogImh0dHBzOi8vYXBpLmdp\ndGh1Yi5jb20vcmVwb3MvbGluYi9BZHZMaW5rLURlbW8vZ2l0L2Jsb2JzLzY2\nZGM5MDUxZGE2NTFjMTVkOThkMDE3YTg4NjU4MjYzY2FiMjhmMDIiLAogICAg\nICAgICJodG1sIjogImh0dHBzOi8vZ2l0aHViLmNvbS9saW5iL0Fkdkxpbmst\nRGVtby9ibG9iL21hc3Rlci9iYXRjaF92ZXJzaW9uaW5nLnB5Lmpzb24iCiAg\nICB9Cn0=\n",
     "encoding": "base64",
     "_links": {
         "self": "https://api.github.com/repos/linb/AdvLink-Demo/contents/batch_versioning.py.json?ref=master",
-        "git": "https://api.github.com/repos/linb/AdvLink-Demo/git/blobs/66dc9051da651c15d98d017a88658263cab28f02",
+        "git": "https://api.github.com/repos/linb/AdvLink-Demo/git/blobs/272c9667917de041519e1754b935260526303e42",
         "html": "https://github.com/linb/AdvLink-Demo/blob/master/batch_versioning.py.json"
     }
 }
